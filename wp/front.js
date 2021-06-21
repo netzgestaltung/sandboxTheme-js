@@ -199,9 +199,6 @@
      * @data   options    optional  this is the configuration part. its structure is only a convention i use. 
      *                    you can also add your variables directly to the feature root but i prefer it that way but an empty object will be created anyways.
      *                    access in methods with "this.options"
-     *                    
-     *                    you can overwrite options pagewise if you add the feature key and the options to the handed over data
-     *                    see line 89 and 333
      *
      * @data   templates  optional  this is the templates part. its structure is only a convention i use. 
      *                    you can also add your variables directly to the feature root but i prefer it that way.
