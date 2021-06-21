@@ -242,9 +242,11 @@
      *                    you need to execute it yourselve, most of the time from the ready method.
      *                    you can also ommit it and add the event listeners to the ready method.
      *
-     * @custom you can add custom event names ('myCustomEvent') to the list at line 12 and then trigger it with "sandboxTheme.trigger('myCustomEvent');
-     *         if you then add a method "myCustomEvent()" to the feature it gets executed every time the event was triggered. 
-     *         this allows cross-feature event triggering for promises resolving.
+     * @custom events     you can add custom event names ('myCustomEvent') to the list at line 12 and then trigger it with "sandboxTheme.trigger('myCustomEvent');
+     *                    if you then add a method "myCustomEvent()" to the feature it gets executed every time the event was triggered. 
+     *                    this allows cross-feature event triggering for promises resolving.
+     *
+     * @custom methods    besides the methods executed by events you can add methods as you like, similar to the "events()" method
      */
     dummy: {
       options: {
@@ -321,7 +323,7 @@
    * merges WP REST API results with theme_data
    *
    * @object sandboxTheme_data   data handed over with wp_localize_script
-   * @object pageData            WP REST API result
+   * @object siteData            WP REST API result
    *
    * @use    sandboxTheme.init() initiates the page theme actions
    */
