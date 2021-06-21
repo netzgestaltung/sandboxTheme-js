@@ -115,11 +115,11 @@
         };
 
     return {
-      init: function init(){
+      init: function(){
         setup(arguments[0] || null);
       },
       $body: $body,
-      is_page: function is_page(){
+      is_page: function(){
         var id = typeof arguments[0] !== 'undefined' ? parseInt(arguments[0]) : null;
 
         if ( id ) {
@@ -128,7 +128,7 @@
           return sandboxTheme.info.is_page;
         }
       },
-      get_page: function get_page(){
+      get_page: function(){
         var property = typeof arguments[0] === 'string' ? arguments[0] : null;
 
         if ( property ) {
@@ -141,7 +141,7 @@
           return sandboxTheme.page;
         }
       },
-      get_feature: function get_page(){
+      get_feature: function(){
         var feature_name = typeof arguments[0] === 'string' ? arguments[0] : null;
 
         if ( feature_name ) {
@@ -154,7 +154,7 @@
           return sandboxTheme.features;
         }
       },
-      trigger: function trigger(){
+      trigger: function(){
         var eventName = typeof arguments[0] !== 'undefined' ? arguments[0] : null,
             data = typeof arguments[1] !== 'undefined' ? arguments[1] : null;
 
@@ -162,7 +162,7 @@
           trigger_event(eventName, data);
         }
       },
-      sanitize_html_class: function sanitize_html_class(){
+      sanitize_html_class: function(){
         var class_name = typeof arguments[0] === 'string' ? arguments[0] : null;
 
         // taken from WordPress PHP API for best compatibility
@@ -262,7 +262,7 @@
         'dummy': '<div />',
       },
       info: {}, // will be filled automagic with "name" -> info.name = dummy
-      events: function events(){
+      events: function(){
         var classNames = this.options.classNames,
             selectors = this.options.selectors,
             info = this.info;
@@ -276,13 +276,13 @@
           console.log($dummy);
         });
       },
-      resize: function resize(){
+      resize: function(){
         console.log('resized and ' + this.info.name + ' API function called');
       },
-      scroll: function resize(){
+      scroll: function(){
         console.log('scrolled and ' + this.info.name + ' API function called');
       },
-      ready: function ready(){
+      ready: function(){
         var classNames = this.options.classNames,
             selectors = this.options.selectors,
             templates = this.templates,
@@ -304,7 +304,7 @@
         this.events();
         console.log('Feature ' + this.info.name + ' finished setup and ready methods');
       },
-      setup: function setup(){
+      setup: function(){
         var is_setup = false; // is_allowed_page && !( is_denied_permanet || is_denied_by_url );
 
         console.log('Document is laoded and ' + this.info.name + ' API function called');
