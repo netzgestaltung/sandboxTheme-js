@@ -10,7 +10,7 @@
  *                        you can change it with search/replace
  *
  * @method  init()        use to initiate the lib. you can fill the first param "data" it with a handed over localization script in JSON format
- * @param   object  data  required named usually "sandboxTheme_data"
+ * @param   {object}  data  required named usually "sandboxTheme_data"
  *                      
  *                        WordPress: use wp_localize_script to add data. 
  *                        See /theme/wordpress/functions.php for detailed possibilities
@@ -24,7 +24,7 @@
  * @body    jQuery_DOMelement $body  never again select $('body') just use this one or document.body
  *
  *
- * @data    object  page  page data storage, gets extracted from init data with every key/value pairs except for the "info" key
+ * @data    {object}  page  page data storage, gets extracted from init data with every key/value pairs except for the "info" key
  *
  *                        WordPress usual contents with the sandboxTheme_data:
  *                        - ID:   number
@@ -63,7 +63,7 @@
  *                        also it may be subject to change
  *
  *
- * @data    object  info  info data storage, gets extracted from init data "info" key values and gets extended by features informations
+ * @data    {object}  info  info data storage, gets extracted from init data "info" key values and gets extended by features informations
  *                        can be also filled and extended like the page data
  *
  *
@@ -74,26 +74,26 @@
  *                        default events: 'resize', 'scroll', 'ready', 'load', 'sticky'
  *                        you can easily extend that list to allow more event names.
  *
- * @param   string  eventName  required name of the event to trigger
- * @param   object  eventData  optional pass additional data to the event handlers
+ * @param   {string}  eventName  required name of the event to trigger
+ * @param   {object}  eventData  optional pass additional data to the event handlers
  *
  *
  * @method  sanitize_html_class()  clone of WordPress PHP API method sanitize_html_class for best compatibility.
  *                                 use it to get save sanitized html classNames
  *                        
- * @param   string  class_name     required  string you want to be a class name
+ * @param   {string}  class_name     required  string you want to be a class name
  *
  *
  * @method  is_page()   use to determine if this is a "page", in WordPress this means if it has the post_type "page"
- * @param   number  ID  optional  when in ID gets provided is_page() checks if you are on a post/page/content with that ID 
+ * @param   {number}  ID  optional  when in ID gets provided is_page() checks if you are on a post/page/content with that ID 
  *
  *
  * @method  get_page()       returns you all page properties in sandboxTheme.page or single properties if a propertyname is provided
- * @param   string property  optional  throws an error if the property does not exist.
+ * @param   {string} property  optional  throws an error if the property does not exist.
  *
  *
  * @method  get_feature()        returns you all registered features or a single feature if a featurename is provided
- * @param   string feature_name  optional  throws an error if the feature does not exist.
+ * @param   {string} feature_name  optional  throws an error if the feature does not exist.
  */
 ;(function($){
   'use strict';
