@@ -11,7 +11,7 @@ Gives you all you need to deal with frontend/client/browser interactions
 -   you can change the name with search/replace
 
 Source:  
--   [lib.js](lib.js.html), [line 4](lib.js.html#line4)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 4](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L4)
 
 ### Members
 
@@ -24,7 +24,7 @@ never again select \$('body') just use sandboxTheme.\$body or document.body
 -   jQuery\_DOMelement
 
 Source:  
--   [lib.js](lib.js.html), [line 255](lib.js.html#line255)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 255](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L255)
 
 #### (static) features :object
 
@@ -35,7 +35,7 @@ place to add your features.
 -   object
 
 Source:  
--   [lib.js](lib.js.html), [line 391](lib.js.html#line391)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 391](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L391)
 
 #### (static) info :object
 
@@ -48,7 +48,7 @@ can be also filled and extended like the page data
 -   object
 
 Source:  
--   [lib.js](lib.js.html), [line 116](lib.js.html#line116)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 116](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L116)
 
 #### (static) page :object
 
@@ -83,7 +83,7 @@ you can add more values in a similar way as WordPress or you can also use the gl
 -   object
 
 Source:  
--   [lib.js](lib.js.html), [line 125](lib.js.html#line125)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 125](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L125)
 
 ### Methods
 
@@ -120,7 +120,7 @@ returns you all registered features or a single feature if a featurename is prov
 </table>
 
 Source:  
--   [lib.js](lib.js.html), [line 315](lib.js.html#line315)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 315](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L315)
 
 #### (static) get\_page(propertyopt)
 
@@ -155,7 +155,7 @@ returns you all page properties in sandboxTheme.page or single properties if a p
 </table>
 
 Source:  
--   [lib.js](lib.js.html), [line 290](lib.js.html#line290)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 290](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L290)
 
 #### (static) init(data)
 
@@ -189,7 +189,7 @@ use to initiate the lib. you can fill the first param "data" it with a handed ov
 </table>
 
 Source:  
--   [lib.js](lib.js.html), [line 251](lib.js.html#line251)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 251](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L251)
 
 #### (static) is\_page(IDopt)
 
@@ -223,7 +223,7 @@ use to determine if this is a "page", in WordPress this means if it has the post
 </table>
 
 Source:  
--   [lib.js](lib.js.html), [line 269](lib.js.html#line269)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 269](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L269)
 
 #### (static) sanitize\_html\_class(class\_name)
 
@@ -256,7 +256,7 @@ Use it to get save sanitized html classNames
 </table>
 
 Source:  
--   [lib.js](lib.js.html), [line 369](lib.js.html#line369)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 369](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L369)
 
 #### (static) trigger(eventName, eventDataopt)
 
@@ -308,7 +308,7 @@ you can easily extend that list to allow more event names.
 </table>
 
 Source:  
--   [lib.js](lib.js.html), [line 350](lib.js.html#line350)
+-   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 350](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L350)
 
 [Home](index.html)
 ------------------
