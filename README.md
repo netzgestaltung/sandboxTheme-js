@@ -1,8 +1,5 @@
-Namespace: sandboxTheme
-=======================
-
-sandboxTheme
-------------
+sandboxTheme JS
+---------------
 
 Sandbox Theme Frontend JS Revealing Module
 
