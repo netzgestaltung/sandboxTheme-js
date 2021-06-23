@@ -242,3 +242,4 @@ Use it to get save sanitized html classNames
 var text = element.textContent, // hello world
     class_name = sandboxTheme.sanitize_html_class(text); // hello-world
 ```
+

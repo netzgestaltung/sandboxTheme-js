@@ -83,7 +83,7 @@
 
         /**
          * @function  ready_events_register  sets all event handler after the document has become "ready"   
-         *       * 
+         *
          * @memberof! sandboxTheme
          * @private
          */
@@ -100,7 +100,7 @@
         /**
          * @function  setup  initiates the sandboxTheme 
          * @param    {object}  data  data stack to instantiate with   
-         *       * 
+         *
          * @memberof! sandboxTheme
          * @private
          */
