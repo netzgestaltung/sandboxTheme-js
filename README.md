@@ -1,314 +1,244 @@
-sandboxTheme JS
----------------
+<a name="sandboxTheme"></a>
 
+## sandboxTheme : <code>object</code>
 Sandbox Theme Frontend JS Revealing Module
 
 Gives you all you need to deal with frontend/client/browser interactions
+- feature methods API to easy develop fast forward features
+- global API methods to access page data and information about the current page
+- global namespace of the lib in the window object
+- you can change the name with search/replace
 
--   feature methods API to easy develop fast forward features
--   global API methods to access page data and information about the current page
--   global namespace of the lib in the window object
--   you can change the name with search/replace
+**Kind**: global namespace  
 
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 4](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L4)
+* [sandboxTheme](#sandboxTheme) : <code>object</code>
+    * [.info](#sandboxTheme.info) : <code>object</code>
+    * [.page](#sandboxTheme.page) : <code>object</code>
+    * [.$body](#sandboxTheme.$body) : <code>jQuery\_DOMelement</code>
+    * [.features](#sandboxTheme.features) : <code>object</code>
+    * [.init(data)](#sandboxTheme.init)
+    * [.is_page([ID])](#sandboxTheme.is_page)
+    * [.get_page([property])](#sandboxTheme.get_page)
+    * [.get_feature([feature_name])](#sandboxTheme.get_feature) ⇒ <code>namespace</code> \| <code>object</code>
+    * [.trigger(eventName, [eventData])](#sandboxTheme.trigger)
+    * [.sanitize_html_class(class_name)](#sandboxTheme.sanitize_html_class)
 
-### Members
+<a name="sandboxTheme.info"></a>
 
-#### (static) \$body :jQuery\_DOMelement
-
-never again select \$('body') just use sandboxTheme.\$body or document.body
-
-##### Type:
-
--   jQuery\_DOMelement
-
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 255](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L255)
-
-#### (static) features :object
-
-place to add your features.
-
-##### Type:
-
--   object
-
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 391](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L391)
-
-#### (static) info :object
-
+### sandboxTheme.info : <code>object</code>
 gerneral purpose data storage, gets extracted from init data "info" key values and gets extended by features informations
 
 can be also filled and extended like the page data
 
-##### Type:
+**Kind**: static property of [<code>sandboxTheme</code>](#sandboxTheme)  
+<a name="sandboxTheme.page"></a>
 
--   object
-
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 116](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L116)
-
-#### (static) page :object
-
+### sandboxTheme.page : <code>object</code>
 page data storage, gets extracted from init data with every key/value pairs except for the "info" key
 
-WordPress usual contents with the sandboxTheme\_data:
+  WordPress usual contents with the sandboxTheme_data:
+  - ID:   number
+  - name: string  the slug/permalink name of that page/post/content
+  - meta: object  other field contents, in WordPress filled with "get_post_custom()"
+  - verify:       nonce value used for admin-ajax requests filled with "wp_create_nonce('sandbox_ajax_call')"
+  - urls: object  contains addresses where your script can communicate with
+  -- admin-ajax:    address to access ajax responder functions
+  -- rest:          rest endpoint for that page
+  -- template:      Template root folder URL
+                       
+  Drupal usual contents of window.drupalsettings:
+  - ajaxTrustedUrl:   object
+  - data:   object  contains informations about external links and other stuff
+  - path:   object  contains relevant data
+  -- baseUrl:             string   root of the website
+  -- currentLanguage:     string   2 letter ISO language code
+  -- currentPath:         string   the node path, example "node/1" also useable as ID
+  -- currentPathIsAdmin:  Boolean
+  -- isFront:             Boolean
+  -- pathPrefix:          string   ""
+  -- scriptPath:          string/null
+  - there are even more keys there, to see all look at
+  UNFORTUNATLY there is no documentation for Drupal what default values are inside of "drupalssettings"
+  also it may be subject to change
+                       
+  Shopify usual contents of window.sandboxTheme_data
+  - handle:        string  the slug/permalink name of that page/post/content
+  - template:      string  the used template root file name
+  - shopCurrency:  string  ISO currency name
+  - moneyFormat:   string  template to display an ammount, example: "&euro;{{amount}}"
+                       
+  you can add more values in a similar way as WordPress or you can also use the global
+  window.Shopify object as data source, but thats then not extendable.
+  UNFORTUNATLY there is no documentation for Shopify what default values are inside of "window.Shopify"
+  also it may be subject to change
 
--   ID: number
--   name: string the slug/permalink name of that page/post/content
--   meta: object other field contents, in WordPress filled with "get\_post\_custom()"
--   verify: nonce value used for admin-ajax requests filled with "wp\_create\_nonce('sandbox\_ajax\_call')"
--   urls: object contains addresses where your script can communicate with -- admin-ajax: address to access ajax responder functions -- rest: rest endpoint for that page -- template: Template root folder URL
+**Kind**: static property of [<code>sandboxTheme</code>](#sandboxTheme)  
+<a name="sandboxTheme.$body"></a>
 
-Drupal usual contents of window.drupalsettings:
+### sandboxTheme.$body : <code>jQuery\_DOMelement</code>
+never again select $('body') just use sandboxTheme.$body or document.body
 
--   ajaxTrustedUrl: object
--   data: object contains informations about external links and other stuff
--   path: object contains relevant data -- baseUrl: string root of the website -- currentLanguage: string 2 letter ISO language code -- currentPath: string the node path, example "node/1" also useable as ID -- currentPathIsAdmin: Boolean -- isFront: Boolean -- pathPrefix: string "" -- scriptPath: string/null
--   there are even more keys there, to see all look at UNFORTUNATLY there is no documentation for Drupal what default values are inside of "drupalssettings" also it may be subject to change
+**Kind**: static property of [<code>sandboxTheme</code>](#sandboxTheme)  
+**Example**  
+```js
+sandboxTheme.$body.addClass('myClass');
+```
+<a name="sandboxTheme.features"></a>
 
-Shopify usual contents of window.sandboxTheme\_data
+### sandboxTheme.features : <code>object</code>
+place to add your features.
 
--   handle: string the slug/permalink name of that page/post/content
--   template: string the used template root file name
--   shopCurrency: string ISO currency name
--   moneyFormat: string template to display an ammount, example: "€{{amount}}"
+**Kind**: static namespace of [<code>sandboxTheme</code>](#sandboxTheme)  
+<a name="sandboxTheme.init"></a>
 
-you can add more values in a similar way as WordPress or you can also use the global window.Shopify object as data source, but thats then not extendable. UNFORTUNATLY there is no documentation for Shopify what default values are inside of "window.Shopify" also it may be subject to change
+### sandboxTheme.init(data)
+init method
 
-##### Type:
+use to initiate the lib. 
+you can fill the first param "data" it with a handed over localization script in JSON format
 
--   object
+**Kind**: static method of [<code>sandboxTheme</code>](#sandboxTheme)  
 
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 125](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L125)
+| Param | Type | Description |
+| --- | --- | --- |
+| data | <code>object</code> | named usually "sandboxTheme_data"                         WordPress: use wp_localize_script to add data.    See /theme/wordpress/functions.php for detailed possibilities                         Drupal: use the global "window.drupalsettings" data stack   See https://www.codimth.com/blog/web/drupal/passing-data-php-javascript-drupal-8 for implementations   Shopify: use "window.theme" |
 
-### Methods
+**Example**  
+```js
+// only prepared data
+sandboxTheme.init(sandboxTheme_data);
 
-#### (static) get\_feature(feature\_nameopt)
+// get more data from the WordPress REST API
+// Don't forget to add "'show_in_rest' => true," when registering a custom post type
+var siteData = $.getJSON(sandboxTheme_data.urls.rest);
 
-get\_feature method
+siteData.done(function(pageData){
+  if ( $.isPlainObject(pageData) ) {
+    sandboxTheme.init($.extend(sandboxTheme_data, pageData));
+  } else {
+    sandboxTheme.init(sandboxTheme_data);
+  }
+});
+```
+<a name="sandboxTheme.is_page"></a>
 
-returns you all registered features or a single feature if a featurename is provided
+### sandboxTheme.is\_page([ID])
+is_page method
 
-##### Parameters:
+use to determine if this is a "page", in WordPress this means if it has the post_type "page"
 
-<table>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Attributes</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>feature_name</code></td>
-<td align="left">string</td>
-<td align="left">&lt;optional&gt;<br /></td>
-<td align="left"><p>optional inspect sandboxTheme.featrues for possible values.</p>
-<p>throws an error if the feature does not exist.</p></td>
-</tr>
-</tbody>
-</table>
+**Kind**: static method of [<code>sandboxTheme</code>](#sandboxTheme)  
 
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 315](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L315)
+| Param | Type | Description |
+| --- | --- | --- |
+| [ID] | <code>number</code> | when an ID gets provided is_page() checks if you are on a post/page/content with that ID |
 
-#### (static) get\_page(propertyopt)
+**Example**  
+```js
+if ( sandboxTheme.is_page(8) { 
+  // on page with the ID 8
+};
+```
+<a name="sandboxTheme.get_page"></a>
 
-get\_page method
+### sandboxTheme.get\_page([property])
+get_page  method
 
 returns you all page properties in sandboxTheme.page or single properties if a propertyname is provided
 
-##### Parameters:
+**Kind**: static method of [<code>sandboxTheme</code>](#sandboxTheme)  
 
-<table>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Attributes</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>property</code></td>
-<td align="left">string</td>
-<td align="left">&lt;optional&gt;<br /></td>
-<td align="left"><p>inspect sandboxTheme.page for possible values.</p>
-<p>Throws an error if the property does not exist.</p></td>
-</tr>
-</tbody>
-</table>
+| Param | Type | Description |
+| --- | --- | --- |
+| [property] | <code>string</code> | inspect sandboxTheme.page for possible values.  Throws an error if the property does not exist. |
 
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 290](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L290)
+**Example**  
+```js
+var ajax_url = sandboxTheme.get_page('urls').ajax;
 
-#### (static) init(data)
+if ( sandboxTheme.get_page('url_params').get('view') === 'student' ) { 
+  // URL has "?view=student"
+};
+```
+<a name="sandboxTheme.get_feature"></a>
 
-init method
+### sandboxTheme.get\_feature([feature_name]) ⇒ <code>namespace</code> \| <code>object</code>
+get_feature
 
-use to initiate the lib. you can fill the first param "data" it with a handed over localization script in JSON format
+returns you all registered features or a single feature if a featurename is provided
 
-##### Parameters:
+**Kind**: static method of [<code>sandboxTheme</code>](#sandboxTheme)  
+**Returns**: <code>namespace</code> \| <code>object</code> - all registered features or a single feature if a featurename is provided  
 
-<table>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>data</code></td>
-<td align="left">object</td>
-<td align="left"><p>named usually &quot;sandboxTheme_data&quot;</p>
-<p>WordPress: use wp_localize_script to add data. See /theme/wordpress/functions.php for detailed possibilities</p>
-<p>Drupal: use the global &quot;window.drupalsettings&quot; data stack See https://www.codimth.com/blog/web/drupal/passing-data-php-javascript-drupal-8 for implementations</p>
-<p>Shopify: use &quot;window.theme&quot;</p></td>
-</tr>
-</tbody>
-</table>
+| Param | Type | Description |
+| --- | --- | --- |
+| [feature_name] | <code>string</code> | inspect sandboxTheme.featrues for possible values.                                  throws an error if the feature does not exist. |
 
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 251](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L251)
+**Example**  
+```js
+var scrolled_feature = sandboxTheme.get_feature('scrolled');
 
-#### (static) is\_page(IDopt)
+// sandboxTheme.info['feature-scrolled'] true when setup() of that feature returned true
+// typeof scrolled_feature.ready === 'function' check if that optional method exists
+if ( sandboxTheme.info['feature-scrolled'] && typeof scrolled_feature.ready === 'function' ) {
+  scrolled_feature.ready();
+}
+```
+<a name="sandboxTheme.trigger"></a>
 
-is\_page method
-
-use to determine if this is a "page", in WordPress this means if it has the post\_type "page"
-
-##### Parameters:
-
-<table>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Attributes</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>ID</code></td>
-<td align="left">number</td>
-<td align="left">&lt;optional&gt;<br /></td>
-<td align="left"><p>when an ID gets provided is_page() checks if you are on a post/page/content with that ID</p></td>
-</tr>
-</tbody>
-</table>
-
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 269](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L269)
-
-#### (static) sanitize\_html\_class(class\_name)
-
-Sanitize HTML class
-
-Clone of WordPress PHP API method sanitize\_html\_class for best compatibility.
-
-Use it to get save sanitized html classNames
-
-##### Parameters:
-
-<table>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>class_name</code></td>
-<td align="left">string</td>
-<td align="left"><p>required string you want to be a class name</p></td>
-</tr>
-</tbody>
-</table>
-
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 369](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L369)
-
-#### (static) trigger(eventName, eventDataopt)
-
+### sandboxTheme.trigger(eventName, [eventData])
 trigger method
 
-use to trigger an internal event. all features methods with the same name as the event name will be executed.
+use to trigger an internal event. 
+all features methods with the same name as the event name will be executed.
 
 only event names in the list of the internal "eventNames" array are allowed.
 
 Default event names:
-
--   'resize'
--   'scroll'
--   'ready'
--   'load'
--   'sticky'
+- 'resize'
+- 'scroll'
+- 'ready'
+- 'load'
+- 'sticky'
 
 you can easily extend that list to allow more event names.
 
-##### Parameters:
+**Kind**: static method of [<code>sandboxTheme</code>](#sandboxTheme)  
 
-<table>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Attributes</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>eventName</code></td>
-<td align="left">string</td>
-<td align="left"></td>
-<td align="left"><p>name of the event to trigger</p></td>
-</tr>
-<tr class="even">
-<td align="left"><code>eventData</code></td>
-<td align="left">object</td>
-<td align="left">&lt;optional&gt;<br /></td>
-<td align="left"><p>pass additional data to the event handlers</p></td>
-</tr>
-</tbody>
-</table>
+| Param | Type | Description |
+| --- | --- | --- |
+| eventName | <code>string</code> | name of the event to trigger |
+| [eventData] | <code>object</code> | pass additional data to the event handlers |
 
-Source:  
--   [lib.js](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js), [line 350](https://github.com/netzgestaltung/sandboxTheme-js/blob/main/lib.js#L350)
+**Example**  
+```js
+element.addEventlistener('click', function(event){
+  if ( document.body.classList.contains('active') ) {
+    // all present "disable_element()" methods of all features get executed
+    sandboxTheme.trigger('disable_element', element);
+  } else {
+    // all present "enable_element()" methods of all features get executed
+    sandboxTheme.trigger('enable_element', element);
+  }
+});
+```
+<a name="sandboxTheme.sanitize_html_class"></a>
 
-------------------------
-Documentation generated by [JSDoc 3.6.7](https://github.com/jsdoc/jsdoc) on Tue Jun 22 2021 16:52:16 GMT+0200 (Mitteleuropäische Sommerzeit)
+### sandboxTheme.sanitize\_html\_class(class_name)
+Sanitize HTML class
+
+Clone of WordPress PHP API method sanitize_html_class for best compatibility.
+
+Use it to get save sanitized html classNames
+
+**Kind**: static method of [<code>sandboxTheme</code>](#sandboxTheme)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| class_name | <code>string</code> | required  string you want to be a class name |
+
+**Example**  
+```js
+var text = element.textContent, // hello world
+    class_name = sandboxTheme.sanitize_html_class(text); // hello-world
+```
