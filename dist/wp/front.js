@@ -276,9 +276,49 @@
           console.log($dummy);
         });
       },
+
+      /**
+       * @method [resize] 
+       * 
+       * gets called passive on "resize" event of the window
+       * 
+       * @param  {string} [eventData]  event data from the original resize event
+       * 
+       * @memberof sandboxTheme.features.dummy
+       * @example
+       * // dummy with only resize method
+       * dummy: {
+       *   resize: function(event){
+       *     console.log('resized and ' + this.info.name + '.resize() API method called');
+       *   },
+       *   setup: function(){
+       *     return true;
+       *   }
+       * }
+       */
       resize: function(){
         console.log('resized and ' + this.info.name + ' API function called');
       },
+
+      /**
+       * @method [scroll] 
+       * 
+       * gets called passive on "scroll" event of the window
+       * 
+       * @param  {string} [eventData]  event data from the original scroll event
+       * 
+       * @memberof sandboxTheme.features.dummy
+       * @example
+       * // dummy with only scroll method
+       * dummy: {
+       *   scroll: function(event){
+       *     console.log('scrolled and ' + this.info.name + '.scroll() API method called');
+       *   },
+       *   setup: function(){
+       *     return true;
+       *   }
+       * }
+       */
       scroll: function(){
         console.log('scrolled and ' + this.info.name + ' API function called');
       },

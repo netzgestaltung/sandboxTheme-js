@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding meta -->
+    
+
+    <!-- Adding external script-->
+    
+
+    <!-- Adding external style-->
+    
+
+    <!-- Adding scripts-->
+    
+
+    <!-- Adding style-->
+    
+
+    <!-- Adding overlay script-->
+    
+
+    <!-- Adding overlay style-->
+    
+
+
+    <title>
+      sandboxTheme
+    </title>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/third-party/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/third-party/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/reset.css">
+    <link type="text/css" rel="stylesheet" href="styles/heading.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-base.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-light.css">
+    
+    <svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path
+                    d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z" />
+                <path
+                    d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z" />
+            </g>
+        </symbol>
+        <symbol id='search-icon' viewBox="0 0 512 512">
+            <g>
+                <g>
+                    <path
+                        d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path
+                        d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z" />
+                </g>
+            </g>
+        </symbol>
+        <symbol id="down-icon" viewBox="0 0 16 16">
+            <path 
+                fill-rule="evenodd" 
+                clip-rule="evenodd" 
+                d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"
+            >
+            </path>
+        </symbol>
+    </defs>
+</svg>
+  </head>
+
+  <body>
+
+    <nav class="navbar" id="navbar">
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">SandboxTheme JS</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="8310297" > <h3 class="accordion-heading">Namespaces<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion collapsed child" id=5821848><div class="accordion-heading child"><a href="sandboxTheme.html">sandboxTheme</a><svg><use xlink:href="#down-icon"></use></svg></div><ul class='methods accordion-content'><li data-type='method'><a href="sandboxTheme.html#.get_feature">get_feature</a></li><li data-type='method'><a href="sandboxTheme.html#.get_page">get_page</a></li><li data-type='method'><a href="sandboxTheme.html#.init">init</a></li><li data-type='method'><a href="sandboxTheme.html#.is_page">is_page</a></li><li data-type='method'><a href="sandboxTheme.html#.sanitize_html_class">sanitize_html_class</a></li><li data-type='method'><a href="sandboxTheme.html#.trigger">trigger</a></li></ul></li><li class="accordion-list" id=""><a href="sandboxTheme.features.html">features</a></li></ul> </div></div>
+      
+
+    </nav>
+    <div class="navbar-ham" id="navbar-ham">
+      <div>
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+      </div>
+    </div>
+
+    <div id="main" class="main-content">
+      
+      <h1 id='page-title' class="page-title">
+        sandboxTheme
+      </h1>
+      
+
+      
+
+
+
+
+<section>
+
+
+<header>
+    
+        
+        <h2>
+        
+        sandboxTheme
+        
+        </h2>
+        
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Sandbox Theme Frontend JS Revealing Module</p>
+<p>Gives you all you need to deal with frontend/client/browser interactions</p>
+<ul>
+<li>feature methods API to easy develop fast forward features</li>
+<li>global API methods to access page data and information about the current page</li>
+<li>global namespace of the lib in the window object</li>
+<li>you can change the name with search/replace</li>
+</ul></div>
+        
+
+        
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line4">line 4</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+        <h3 class="subsection-title">Namespaces</h3>
+
+        <dl>
+            <dt><a href="sandboxTheme.features.html">features</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".$body">
+    <a href="#.$body">#</a>
+    <span class="type-signature">(static) </span>$body<span class="type-signature"> :jQuery_DOMelement</span>
+</h4>
+
+
+
+
+<div class="description">
+    <p>never again select $('body') just use sandboxTheme.$body or document.body</p>
+</div>
+
+
+
+    <div class="member-item-container flex">
+        <strong>Type: </strong>
+        <ul>
+            <li>
+                
+<span class="param-type">jQuery_DOMelement</span>
+
+
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line271">line 271</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <div class="rel">
+    <pre class="prettyprint"><code>sandboxTheme.$body.addClass('myClass');</code></pre>
+    
+    
+    </div>
+
+
+
+        
+            
+<h4 class="name" id=".info">
+    <a href="#.info">#</a>
+    <span class="type-signature">(static) </span>info<span class="type-signature"> :object</span>
+</h4>
+
+
+
+
+<div class="description">
+    <p>gerneral purpose data storage, gets extracted from init data &quot;info&quot; key values and gets extended by features informations</p>
+<p>can be also filled and extended like the page data</p>
+</div>
+
+
+
+    <div class="member-item-container flex">
+        <strong>Type: </strong>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line116">line 116</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".page">
+    <a href="#.page">#</a>
+    <span class="type-signature">(static) </span>page<span class="type-signature"> :object</span>
+</h4>
+
+
+
+
+<div class="description">
+    <p>page data storage, gets extracted from init data with every key/value pairs except for the &quot;info&quot; key</p>
+<p>WordPress usual contents with the sandboxTheme_data:</p>
+<ul>
+<li>ID:   number</li>
+<li>name: string  the slug/permalink name of that page/post/content</li>
+<li>meta: object  other field contents, in WordPress filled with &quot;get_post_custom()&quot;</li>
+<li>verify:       nonce value used for admin-ajax requests filled with &quot;wp_create_nonce('sandbox_ajax_call')&quot;</li>
+<li>urls: object  contains addresses where your script can communicate with
+-- admin-ajax:    address to access ajax responder functions
+-- rest:          rest endpoint for that page
+-- template:      Template root folder URL</li>
+</ul>
+<p>Drupal usual contents of window.drupalsettings:</p>
+<ul>
+<li>ajaxTrustedUrl:   object</li>
+<li>data:   object  contains informations about external links and other stuff</li>
+<li>path:   object  contains relevant data
+-- baseUrl:             string   root of the website
+-- currentLanguage:     string   2 letter ISO language code
+-- currentPath:         string   the node path, example &quot;node/1&quot; also useable as ID
+-- currentPathIsAdmin:  Boolean
+-- isFront:             Boolean
+-- pathPrefix:          string   &quot;&quot;
+-- scriptPath:          string/null</li>
+<li>there are even more keys there, to see all look at
+UNFORTUNATLY there is no documentation for Drupal what default values are inside of &quot;drupalssettings&quot;
+also it may be subject to change</li>
+</ul>
+<p>Shopify usual contents of window.sandboxTheme_data</p>
+<ul>
+<li>handle:        string  the slug/permalink name of that page/post/content</li>
+<li>template:      string  the used template root file name</li>
+<li>shopCurrency:  string  ISO currency name</li>
+<li>moneyFormat:   string  template to display an ammount, example: &quot;€{{amount}}&quot;</li>
+</ul>
+<p>you can add more values in a similar way as WordPress or you can also use the global
+window.Shopify object as data source, but thats then not extendable.
+UNFORTUNATLY there is no documentation for Shopify what default values are inside of &quot;window.Shopify&quot;
+also it may be subject to change</p>
+</div>
+
+
+
+    <div class="member-item-container flex">
+        <strong>Type: </strong>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line125">line 125</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".get_feature">
+        <a href="#.get_feature">#</a>
+        <span class="type-signature">(static) </span>get_feature<span class="signature">(feature_name<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {namespace|object}</span>
+    </h4>
+
+    
+
+
+
+    <div class="description">
+        <p>get_feature</p>
+<p>returns you all registered features or a single feature if a featurename is provided</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>feature_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>inspect sandboxTheme.featrues for possible values.
+throws an error if the feature does not exist.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line350">line 350</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>all registered features or a single feature if a featurename is provided</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">namespace</span>
+|
+
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+            
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <div class="rel">
+    <pre class="prettyprint"><code>var scrolled_feature = sandboxTheme.get_feature('scrolled');
+
+// sandboxTheme.info['feature-scrolled'] true when setup() of that feature returned true
+// typeof scrolled_feature.ready === 'function' check if that optional method exists
+if ( sandboxTheme.info['feature-scrolled'] &amp;&amp; typeof scrolled_feature.ready === 'function' ) {
+  scrolled_feature.ready();
+}</code></pre>
+    
+    
+    </div>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".get_page">
+        <a href="#.get_page">#</a>
+        <span class="type-signature">(static) </span>get_page<span class="signature">(property<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+
+    
+
+
+
+    <div class="description">
+        <p>get_page  method</p>
+<p>returns you all page properties in sandboxTheme.page or single properties if a propertyname is provided</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>inspect sandboxTheme.page for possible values.</p>
+<p>Throws an error if the property does not exist.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line318">line 318</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <div class="rel">
+    <pre class="prettyprint"><code>var ajax_url = sandboxTheme.get_page('urls').ajax;
+
+if ( sandboxTheme.get_page('url_params').get('view') === 'student' ) { 
+  // URL has "?view=student"
+};</code></pre>
+    
+    
+    </div>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".init">
+        <a href="#.init">#</a>
+        <span class="type-signature">(static) </span>init<span class="signature">(data)</span><span class="type-signature"></span>
+    </h4>
+
+    
+
+
+
+    <div class="description">
+        <p>init method</p>
+<p>use to initiate the lib.
+you can fill the first param &quot;data&quot; it with a handed over localization script in JSON format</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>named usually &quot;sandboxTheme_data&quot;</p>
+<p>WordPress: use wp_localize_script to add data.
+See /theme/wordpress/functions.php for detailed possibilities</p>
+<p>Drupal: use the global &quot;window.drupalsettings&quot; data stack
+See https://www.codimth.com/blog/web/drupal/passing-data-php-javascript-drupal-8 for implementations</p>
+<p>Shopify: use &quot;window.theme&quot;</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line267">line 267</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <div class="rel">
+    <pre class="prettyprint"><code>// only prepared data
+sandboxTheme.init(sandboxTheme_data);
+
+// get more data from the WordPress REST API
+// Don't forget to add "'show_in_rest' => true," when registering a custom post type
+var siteData = $.getJSON(sandboxTheme_data.urls.rest);
+
+siteData.done(function(pageData){
+  if ( $.isPlainObject(pageData) ) {
+    sandboxTheme.init($.extend(sandboxTheme_data, pageData));
+  } else {
+    sandboxTheme.init(sandboxTheme_data);
+  }
+});</code></pre>
+    
+    
+    </div>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".is_page">
+        <a href="#.is_page">#</a>
+        <span class="type-signature">(static) </span>is_page<span class="signature">(ID<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+
+    
+
+
+
+    <div class="description">
+        <p>is_page method</p>
+<p>use to determine if this is a &quot;page&quot;, in WordPress this means if it has the post_type &quot;page&quot;</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>when an ID gets provided is_page() checks if you are on a post/page/content with that ID</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line291">line 291</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <div class="rel">
+    <pre class="prettyprint"><code>if ( sandboxTheme.is_page(8) { 
+  // on page with the ID 8
+};</code></pre>
+    
+    
+    </div>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".sanitize_html_class">
+        <a href="#.sanitize_html_class">#</a>
+        <span class="type-signature">(static) </span>sanitize_html_class<span class="signature">(class_name)</span><span class="type-signature"></span>
+    </h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Sanitize HTML class</p>
+<p>Clone of WordPress PHP API method sanitize_html_class for best compatibility.</p>
+<p>Use it to get save sanitized html classNames</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>class_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>required  string you want to be a class name</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line417">line 417</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <div class="rel">
+    <pre class="prettyprint"><code>var text = element.textContent, // hello world
+    class_name = sandboxTheme.sanitize_html_class(text); // hello-world</code></pre>
+    
+    
+    </div>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".trigger">
+        <a href="#.trigger">#</a>
+        <span class="type-signature">(static) </span>trigger<span class="signature">(eventName, eventData<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+
+    
+
+
+
+    <div class="description">
+        <p>trigger method</p>
+<p>use to trigger an internal event.
+all features methods with the same name as the event name will be executed.</p>
+<p>only event names in the list of the internal &quot;eventNames&quot; array are allowed.</p>
+<p>Default event names:</p>
+<ul>
+<li>'resize'</li>
+<li>'scroll'</li>
+<li>'ready'</li>
+<li>'load'</li>
+<li>'sticky'</li>
+</ul>
+<p>you can easily extend that list to allow more event names.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>eventName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>name of the event to trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>eventData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>pass additional data to the event handlers</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line395">line 395</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <div class="rel">
+    <pre class="prettyprint"><code>element.addEventlistener('click', function(event){
+  if ( document.body.classList.contains('active') ) {
+    // all present "disable_element()" methods of all features get executed
+    sandboxTheme.trigger('disable_element', element);
+  } else {
+    // all present "enable_element()" methods of all features get executed
+    sandboxTheme.trigger('enable_element', element);
+  }
+});</code></pre>
+    
+    
+    </div>
+
+    </div>
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    </div>
+
+    <footer class="footer" id="footer">
+      
+    </footer>
+
+    <script src="scripts/third-party/prettify.js"></script>
+    <script src="scripts/third-party/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/misc.js"></script>
+
+    <script>prettyPrint();</script>
+    <script src="scripts/linenumber.js"></script>
+    <script src="scripts/fix-code-block.js"></script>
+    <script src="scripts/fix-navbar.js"></script>
+    
+      <script src="scripts/search.js"></script>
+      <script src="scripts/third-party/fuse.js"></script>
+      <script>
+        var list = [{"title":"sandboxTheme","link":"<a href=\"sandboxTheme.html\">sandboxTheme</a>"},{"title":"sandboxTheme.get_feature","link":"<a href=\"sandboxTheme.html#.get_feature\">sandboxTheme.get_feature &rtrif; undefined</a>"},{"title":"sandboxTheme.get_page","link":"<a href=\"sandboxTheme.html#.get_page\">sandboxTheme.get_page &rtrif; undefined</a>"},{"title":"sandboxTheme.init","link":"<a href=\"sandboxTheme.html#.init\">sandboxTheme.init &rtrif; undefined</a>"},{"title":"sandboxTheme.is_page","link":"<a href=\"sandboxTheme.html#.is_page\">sandboxTheme.is_page &rtrif; undefined</a>"},{"title":"sandboxTheme.sanitize_html_class","link":"<a href=\"sandboxTheme.html#.sanitize_html_class\">sandboxTheme.sanitize_html_class &rtrif; undefined</a>"},{"title":"sandboxTheme.trigger","link":"<a href=\"sandboxTheme.html#.trigger\">sandboxTheme.trigger &rtrif; undefined</a>"},{"title":"features","link":"<a href=\"sandboxTheme.features.html\">features</a>"}];
+        var options = 
+          setupSearch(list, options)
+      </script>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  </body>
+
+</html>

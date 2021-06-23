@@ -1,0 +1,26 @@
+{
+  "name": "sandboxthemejs",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "description": "Sandbox Theme Frontend JS Revealing Module",
+  "author": {
+    "name": "Thomas Fellinger",
+    "email": "office@netzgestaltung.at",
+    "url": "https://www.netzgestaltung.at"
+  },
+  "homepage": "https://github.com/netzgestaltung/sandboxTheme-js#readme",
+  "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "jsdoc": "^3.6.7",
+    "jsdoc-json": "^2.0.2"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^7.0.1"
+  }
+}
