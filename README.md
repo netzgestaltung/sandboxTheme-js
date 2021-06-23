@@ -15,7 +15,7 @@ Gives you all you need to deal with frontend/client/browser interactions
     * [.info](#sandboxTheme.info) : <code>object</code>
     * [.page](#sandboxTheme.page) : <code>object</code>
     * [.$body](#sandboxTheme.$body) : <code>jQuery\_DOMelement</code>
-    * [.features](#sandboxTheme.features) : <code>object</code>
+    * [.features](#sandboxTheme.features) : <code>namespace</code>
     * [.init(data)](#sandboxTheme.init)
     * [.is_page([ID])](#sandboxTheme.is_page)
     * [.get_page([property])](#sandboxTheme.get_page)
@@ -85,10 +85,10 @@ sandboxTheme.$body.addClass('myClass');
 ```
 <a name="sandboxTheme.features"></a>
 
-### sandboxTheme.features : <code>object</code>
+### sandboxTheme.features : <code>namespace</code>
 place to add your features.
 
-**Kind**: static namespace of [<code>sandboxTheme</code>](#sandboxTheme)  
+**Kind**: static property of [<code>sandboxTheme</code>](#sandboxTheme)  
 <a name="sandboxTheme.init"></a>
 
 ### sandboxTheme.init(data)
