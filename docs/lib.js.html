@@ -81,7 +81,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">SandboxTheme JS</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="8070512" > <h3 class="accordion-heading">Namespaces<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion collapsed child" id=952755><div class="accordion-heading child"><a href="sandboxTheme.html">sandboxTheme</a><svg><use xlink:href="#down-icon"></use></svg></div><ul class='methods accordion-content'><li data-type='method'><a href="sandboxTheme.html#.get_feature">get_feature</a></li><li data-type='method'><a href="sandboxTheme.html#.get_page">get_page</a></li><li data-type='method'><a href="sandboxTheme.html#.init">init</a></li><li data-type='method'><a href="sandboxTheme.html#.is_page">is_page</a></li><li data-type='method'><a href="sandboxTheme.html#.sanitize_html_class">sanitize_html_class</a></li><li data-type='method'><a href="sandboxTheme.html#.trigger">trigger</a></li></ul></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">SandboxTheme JS</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="8105578" > <h3 class="accordion-heading">Namespaces<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion collapsed child" id=9594253><div class="accordion-heading child"><a href="sandboxTheme.html">sandboxTheme</a><svg><use xlink:href="#down-icon"></use></svg></div><ul class='methods accordion-content'><li data-type='method'><a href="sandboxTheme.html#.get_feature">get_feature</a></li><li data-type='method'><a href="sandboxTheme.html#.get_page">get_page</a></li><li data-type='method'><a href="sandboxTheme.html#.init">init</a></li><li data-type='method'><a href="sandboxTheme.html#.is_page">is_page</a></li><li data-type='method'><a href="sandboxTheme.html#.sanitize_html_class">sanitize_html_class</a></li><li data-type='method'><a href="sandboxTheme.html#.trigger">trigger</a></li></ul></li><li class="accordion-list" id=""><a href="sandboxTheme.html#.features">features</a></li></ul> </div></div>
       
 
     </nav>
@@ -555,6 +555,145 @@
   
 })(jQuery);
 
+// Custom page actions
+;(function($){
+  'use strict';
+  
+  /**
+   * @namespace sandboxTheme
+   */
+  window.sandboxTheme = window.sandboxTheme || {};
+
+
+  /**
+   * @namespace features
+   * @memberof sandboxTheme
+   */
+  sandboxTheme.features = $.extend(true, sandboxTheme.features || {}, {
+
+    /**
+     * @member  {object} scrolled
+     * 
+     * Checks for a value in window.location.hash and scrolls there
+     * Controlls a className to be set, when the page has been scrolled
+     * Any layout based on this behaviour is at style.css
+     *
+     * @memberof sandboxTheme.features
+     * @example  &lt;caption>Example CSS usage of scrolled class_name.&lt;/caption>
+     * 
+     * header{
+     *   height:150px;
+     *   transition:height ease 150ms;
+     * }
+     * 
+     * .scrolled header{
+     *   height:40px;
+     * }
+     */
+    scrolled: {
+    
+      /**
+       * @member  {object}  info  gerneral purpose data storage. 
+       *
+       * Gets also created by sandboxTheme.init() if not present
+       * @property {boolean}       is_scrolled  - current scroll state
+       * @property {string}        name         - the feature name
+       * @property {string}        class_name   - the feature name sanitzed by sandboxTheme.sanitize_html_class()
+       * @property {string|false}  hash         - String if a hash fragment that starts with the features name exists, false otherwise
+       * 
+       * @memberof andboxTheme.features.scrolled
+       */
+      info: {
+        is_scrolled: false
+      },
+
+      /**
+       * @method [scroll] 
+       * 
+       * gets first time executed in the end of the ready event method
+       * gets executed passive on "scroll" event of the window
+       * 
+       * @param  {string} [eventData]  event data from the original scroll event
+       * 
+       * @memberof andboxTheme.features.scrolled
+       * @example
+       * // dummy feature with only scroll method
+       * dummy: {
+       *   scroll: function(event){
+       *     console.log('scrolled and ' + this.info.name + '.scroll() API method called');
+       *   },
+       *   setup: function(){
+       *     return true;
+       *   }
+       * }
+       */
+      scroll: function(){
+        if (this.$window.scrollTop() > 100){
+          if ( !this.info.isScrolled ) {
+            this.info.isScrolled = true;
+            document.body.classList.add(this.info.class_name);
+          }
+        } else {
+          if ( this.info.isScrolled ) {
+            this.info.isScrolled = false;
+            document.body.classList.remove(this.info.class_name);
+          }
+        }
+      },
+
+      /**
+       * @method [ready] 
+       * 
+       * gets executed on DOMContentLoaded or after API call if any
+       * 
+       * @memberof andboxTheme.features.scrolled
+       * @example
+       * // dummy with only ready method
+       * dummy: {
+       *   ready: function(){
+       *     console.log('Document is ready and ' + this.info.name + ' API function called');
+       *   },
+       *   setup: function(){
+       *     return true;
+       *   }
+       * }
+       */
+      ready: function(){
+        var scrollTop = 0;
+
+        this.$window = $(window);
+        this.$target = window.location.hash.length > 0 ? $(window.location.hash) : false;
+
+        if ( this.$target &amp;&amp; this.$target.length > 0 ) {
+          scrollTop = this.$target.offset().top;
+        }
+        $('html, body').scrollTop(scrollTop);
+        this.scroll();
+      },
+
+      /**
+       * @method setup
+       * 
+       * gets executed directly on script load
+       * 
+       * @memberof andboxTheme.features.scrolled
+       * @example
+       * // dummy with only setup method
+       * dummy: {
+       *   setup: function(){
+       *     console.log('Script started and ' + this.info.name + ' API function called. Check sandboxTheme.info["feature-' + this.info.name + '"] for the return value of this setup()')
+       *     return false;
+       *   }
+       * }
+       */
+      setup: function(){
+        var isSetup = true; //sandboxTheme.info.is_front_page || sandboxTheme.info.is_home || sandboxTheme.info.is_archive;
+        return isSetup;
+      }
+    },
+  });
+})(jQuery);
+
 </code></pre>
         </article>
     </section>
@@ -580,7 +719,7 @@
       <script src="scripts/search.js"></script>
       <script src="scripts/third-party/fuse.js"></script>
       <script>
-        var list = [{"title":"sandboxTheme","link":"<a href=\"sandboxTheme.html\">sandboxTheme</a>"},{"title":"sandboxTheme.get_feature","link":"<a href=\"sandboxTheme.html#.get_feature\">sandboxTheme.get_feature &rtrif; undefined</a>"},{"title":"sandboxTheme.get_page","link":"<a href=\"sandboxTheme.html#.get_page\">sandboxTheme.get_page &rtrif; undefined</a>"},{"title":"sandboxTheme.init","link":"<a href=\"sandboxTheme.html#.init\">sandboxTheme.init &rtrif; undefined</a>"},{"title":"sandboxTheme.is_page","link":"<a href=\"sandboxTheme.html#.is_page\">sandboxTheme.is_page &rtrif; undefined</a>"},{"title":"sandboxTheme.sanitize_html_class","link":"<a href=\"sandboxTheme.html#.sanitize_html_class\">sandboxTheme.sanitize_html_class &rtrif; undefined</a>"},{"title":"sandboxTheme.trigger","link":"<a href=\"sandboxTheme.html#.trigger\">sandboxTheme.trigger &rtrif; undefined</a>"}];
+        var list = [{"title":"sandboxTheme","link":"<a href=\"sandboxTheme.html\">sandboxTheme</a>"},{"title":"sandboxTheme.get_feature","link":"<a href=\"sandboxTheme.html#.get_feature\">sandboxTheme.get_feature &rtrif; undefined</a>"},{"title":"sandboxTheme.get_page","link":"<a href=\"sandboxTheme.html#.get_page\">sandboxTheme.get_page &rtrif; undefined</a>"},{"title":"sandboxTheme.init","link":"<a href=\"sandboxTheme.html#.init\">sandboxTheme.init &rtrif; undefined</a>"},{"title":"sandboxTheme.is_page","link":"<a href=\"sandboxTheme.html#.is_page\">sandboxTheme.is_page &rtrif; undefined</a>"},{"title":"sandboxTheme.sanitize_html_class","link":"<a href=\"sandboxTheme.html#.sanitize_html_class\">sandboxTheme.sanitize_html_class &rtrif; undefined</a>"},{"title":"sandboxTheme.trigger","link":"<a href=\"sandboxTheme.html#.trigger\">sandboxTheme.trigger &rtrif; undefined</a>"},{"title":"features","link":"<a href=\"sandboxTheme.html#.features\">features</a>"}];
         var options = 
           setupSearch(list, options)
       </script>

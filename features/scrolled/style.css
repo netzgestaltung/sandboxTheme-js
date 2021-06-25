@@ -1,0 +1,11 @@
+/**
+ * Usage example for scrolled sandboxTheme JS feature with animation.
+ */
+header{
+  height:150px;
+  transition:height ease 150ms;
+}
+
+.scrolled header{
+  height:40px;
+}
