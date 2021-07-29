@@ -1,0 +1,9 @@
+/**
+ * Usage example for scrolled sandboxTheme JS feature with dummy content.
+ */
+.dummy{
+  height:150px;
+  width:300px;
+  padding:1em;
+  border:1px solid #E2E2E2;
+}

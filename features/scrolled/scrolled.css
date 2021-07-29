@@ -1,0 +1,29 @@
+/**
+ * Usage example for scrolled sandboxTheme JS feature with animation.
+ */
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+}
+.site-title,
+#dev-themes-logo{
+  transition:all ease 150ms;
+}
+.site-title{
+  padding:1em;
+  font-size:1.8em;
+}
+.scrolled .site-title{
+  padding:0;
+  font-size:1.6em;
+}
+#dev-themes-logo{
+  width:297px;
+}
+.scrolled #dev-themes-logo{
+  width:150px;
+}
+

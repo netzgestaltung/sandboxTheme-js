@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>sandboxTheme JS</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <script src="assets/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="../sandboxTheme.js"></script>
+    
+    <script src="../features/scrolled/scrolled.js"></script>
+    <link rel="stylesheet" href="../features/scrolled/scrolled.css" />
+
+    <script src="../features/feature/feature.js"></script>
+    <link rel="stylesheet" href="../features/feature/feature.css" />
+    
+    <script src="../features/scrollto/scrollto.js"></script>
+    
+    <script src="../features/accordeon/accordeon.js"></script>
+    <link rel="stylesheet" href="../features/accordeon/accordeon.css" />
+  </head>
+  <body>
+    <div id="top"></div>
+    <header class="site-header">
+      <div class="site-logo">
+        <svg id="dev-themes-logo" viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+          <style type="text/css">
+            #dev-themes-logo path,
+            #dev-themes-logo circle{
+              fill:currentColor;
+            }
+          </style>
+          <circle id="dev-themes-logo-dot" cx="33.694" cy="106.33" r="2.3722"/>
+          <path id="dev-themes-logo-dev" d="m46.223 67.959c-0.77756 0-1.3375 0.18127-1.6805 0.54719-0.32016 0.34303-0.48098 0.9395-0.48098 1.7857 0 0.84617 0.16081 1.4509 0.48098 1.8168 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h3.842v31.389h-3.842c-0.77756 0-1.3375 0.18326-1.6805 0.54914-0.32016 0.34303-0.48098 0.93755-0.48098 1.7837 0 0.84617 0.16081 1.4529 0.48098 1.8188 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h16.157c3.5905 0 6.7483-0.81233 9.4697-2.4361 2.7215-1.6466 4.8247-4.0023 6.3112-7.0668 1.5094-3.0645 2.2647-6.6764 2.2647-10.839s-0.75533-7.7761-2.2647-10.841c-1.4865-3.0874-3.5897-5.443-6.3112-7.0668-2.7215-1.6466-5.8792-2.4692-9.4697-2.4692zm42.126 0c-0.77757 0-1.3375 0.18127-1.6805 0.54719-0.32016 0.34303-0.48098 0.9395-0.48098 1.7857 0 0.84617 0.16081 1.4509 0.48098 1.8168 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h3.4993v31.389h-3.4993c-0.77757 0-1.3375 0.18326-1.6805 0.54914-0.32016 0.34303-0.48098 0.93755-0.48098 1.7837 0 0.84617 0.16081 1.4529 0.48098 1.8188 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h30.668c0.77756 0 1.3253-0.17104 1.6455-0.51409 0.34304-0.36591 0.51603-0.97261 0.51603-1.8188v-10.188c0-0.80043-0.1954-1.3725-0.58419-1.7156-0.38878-0.34303-1.0525-0.51409-1.9901-0.51409-0.93765 0-1.5994 0.17104-1.9882 0.51409-0.38878 0.34303-0.58419 0.91514-0.58419 1.7156v7.8554h-19.039v-13.995h8.8505v3.1215c0 0.80043 0.17104 1.3725 0.51409 1.7156 0.36591 0.34303 1.0072 0.51409 1.922 0.51409 0.91479 0 1.5439-0.17104 1.8869-0.51409 0.36591-0.34303 0.54914-0.91514 0.54914-1.7156v-10.909c0-0.80043-0.18322-1.3725-0.54914-1.7156-0.34303-0.34303-0.97215-0.51409-1.8869-0.51409-0.91477 0-1.5561 0.17104-1.922 0.51409-0.34303 0.34303-0.51409 0.91514-0.51409 1.7156v3.1215h-8.8505v-12.728h18.353v6.3813c0 0.80043 0.19345 1.3725 0.58224 1.7156 0.38878 0.34303 1.0525 0.51409 1.9901 0.51409 0.93765 0 1.6014-0.17104 1.9902-0.51409 0.38878-0.34303 0.58224-0.91514 0.58224-1.7156v-8.7122c0-0.84618-0.17103-1.4426-0.51408-1.7857-0.3202-0.36591-0.86791-0.54719-1.6455-0.54719zm39.725 0c-0.77757 0-1.3394 0.18127-1.6825 0.54719-0.32016 0.34303-0.47904 0.9395-0.47904 1.7857 0 0.84617 0.15885 1.4509 0.47904 1.8168 0.34303 0.34303 0.9049 0.51409 1.6825 0.51409h2.6055l12.213 34.58c0.27441 0.77757 0.6979 1.3375 1.2696 1.6805 0.5946 0.36591 1.3826 0.54914 2.366 0.54914 1.0063 0 1.7962-0.17299 2.3679-0.51604 0.59461-0.34303 1.0405-0.91319 1.3378-1.7136l12.315-34.58h2.6406c0.77757 0 1.3272-0.17104 1.6474-0.51409 0.34304-0.36591 0.51409-0.97066 0.51409-1.8168 0-0.84618-0.17104-1.4426-0.51409-1.7857-0.32019-0.36591-0.86985-0.54719-1.6474-0.54719h-11.456c-0.77758 0-1.3394 0.18127-1.6825 0.54719-0.32016 0.34303-0.47903 0.9395-0.47903 1.7857 0 0.84617 0.15885 1.4509 0.47903 1.8168 0.34304 0.34303 0.90491 0.51409 1.6825 0.51409h3.4292l-10.599 30.325-10.498-30.325h4.8371c0.77755 0 1.3272-0.17104 1.6474-0.51409 0.34303-0.36591 0.51409-0.97066 0.51409-1.8168 0-0.84618-0.17104-1.4426-0.51409-1.7857-0.32016-0.36591-0.86986-0.54719-1.6474-0.54719zm-72.862 4.6638h6.3794c2.7215 0 5.0893 0.60668 7.1018 1.8188 2.0125 1.2121 3.568 2.9956 4.6657 5.3512 1.0977 2.3327 1.6455 5.181 1.6455 8.5428s-0.54774 6.2204-1.6455 8.5759c-1.0977 2.3327-2.6532 4.104-4.6657 5.3161-2.0125 1.1892-4.3803 1.7837-7.1018 1.7837h-6.3794z"/>
+          <path id="dev-themes-logo-themes" d="m402.02 29.5c-11.523 0.1141-16.429 8.0991-16.429 19.736 0 22.019 30.577 21.335 30.577 41.528 0 9.6973-3.7661 17.341-14.262 17.341s-14.26-7.6434-14.26-17.341v-3.9939h-2.3952v3.879c0 11.066 4.5622 19.851 16.655 19.851 12.207 0 16.772-8.7845 16.772-19.851 0-21.676-30.577-21.105-30.577-41.526 0-9.4691 3.5383-17.343 14.034-17.343 10.382 0 13.917 7.9865 13.917 17.456v1.5968h2.5101v-1.4819c0-10.952-4.4492-19.851-16.542-19.851zm-237.53 0.57056v2.3952h17.456v77.464h2.5081v-77.464h17.456v-2.3952zm44.402 0v79.859h2.5101v-38.788h28.863v38.788h2.5101v-79.859h-2.5101v38.788h-28.863v-38.788zm42.691 0v79.859h30.462v-2.3952h-27.952v-36.964h23.502v-2.2822h-23.502v-35.823h27.952v-2.3952zm39.041 0v79.859h2.2803v-76.095l19.738 75.867h2.8528l19.621-75.867v76.095h2.5101v-79.859h-3.879l-19.623 75.752-19.621-75.752zm55.81 0v79.859h30.462v-2.3952h-27.952v-36.964h23.502v-2.2822h-23.502v-35.823h27.952v-2.3952z"/>
+        </svg>
+      </div>
+      <div class="site-title">sandboxTheme JS</div>
+      <nav class="header-bar">
+        <ul class="menu">
+          <li class="menu-item item-feature"><a rel="scrollto" href="#feature">Feature</a></li>
+          <li class="menu-item item-accordeon"><a rel="scrollto" href="#accordeon">Accordeon</a></li>
+          <li class="menu-item item-scrolled"><a rel="scrollto" href="#scrolled">Scrolled</a></li>
+          <!-- <li class="menu-item item-scrollindicator"><a rel="scrollto" href="#scrollindicator">Scrollindicator</a></li> -->
+          <li class="menu-item item-scrollto"><a rel="scrollto" href="#scrollto">Scrollto</a></li>
+          <!-- <li class="menu-item item-to-top"><a rel="scrollto" class="to-top" href="#top" >Get to top</a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside id="content-before" class="content-before sidebar">
+        <h3>ABOUT</h3>
+        <p>Diese Webstie soll ein paar wichtige Aktionen erklären die sich sehr nützlich und hilfreich für deine nächste Websitedarstelle können.</p>
+        <br>
+        <p>Als aller erstes wir erklärt wofür SVG verwendet wird und die Vorteile von SVG</p>
+        <br>
+        <p>Danach wird die Accordeon Function erklärt.Zum Beispiel wofür sie genutzt wir und was diese Function überhaupt machen kann</p>
+      </aside>
+      <article id="content">
+        <h1 class="title">sandboxTheme JS Demo Seite</h1>
+        <div class="content">
+        
+          <h3 id="feature">Feature</h3>
+          <p>Feature ist eine art Grundaufbau. Du kannst dieses Feature einfach als Codebasis verwenden.</p>
+          <p>In Feature gibt es sehr viele Erklärungen zu jeder einzelnen Methode.<del>Dort wird auch JQerry herforragend erklärt.</del> Wo wird dort jQuery hervorragend erklärt?</p>
+          <p>In der Javascript-Console deines Browsers kannst du die Logs von Feature ansehen.</p>
+          <h4>Beispiel</h4>
+          <div class="feature-dummy">
+            <h5>Dummy Box</h5>
+          </div>
+          <p>Bewege deine Maus über die Dummy Box und beobachte dabei die Javascript Console deines Browsers</p>
+          <img src="img/features-feature-console.png" />
+          <h3 id="accordeon">Accordeon</h3>
+          <h4>Das Accordeon ist eine Javascript action die sehr text basiert ist. Diese Funtion umschließt Text und macht ihn damit unsichtbar aber mit einem Klick kann man diese versteckten Texte einfach wieder anzeigen lassen.</h4>
+
+          <p>Alle h3 die in dieser main Function sind werden zu accordeons wenn man eines von diesen accordeon anklickt wird eine smoothe animation ausgeführt und der verborgene Text kann gelesen werden.</p>
+          <h4>Beispiel</h4>
+          <p>Ich bin ein Beispiel</p>
+          <h3 id="scrolled">Scrolled</h3>
+          <p>Überwacht ob vom Beginn der Seite aus gescrollt wurde und fügt dem HTML "body" Element eine Klasse "scrolled" hinzu wenn es zutrifft.
+          <pre class="language-js"><code class="language-js">/**
+ * @member   {object}  config  feature options. 
+ * @property {number}  offset  the scroll treshold when to trigger the switch
+ * 
+ * @memberof andboxTheme.features.scrolled
+ */
+config: {
+  offset: 100
+},</code></pre>
+          <p><strong>Offset:</strong> In der Configuration kann eingestell werden ab welcher Scrollweite in Pixel das geschehen soll</p>
+          <h4>Beispiel</h4>
+          <h5>Scrolle rauf und runter um den Effekt zu sehen.</h5>
+          <svg id="dev-themes-logo" viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+            <style type="text/css">
+              #dev-themes-logo path,
+              #dev-themes-logo circle{
+                fill:currentColor;
+              }
+            </style>
+            <circle id="dev-themes-logo-dot" cx="33.694" cy="106.33" r="2.3722"/>
+            <path id="dev-themes-logo-dev" d="m46.223 67.959c-0.77756 0-1.3375 0.18127-1.6805 0.54719-0.32016 0.34303-0.48098 0.9395-0.48098 1.7857 0 0.84617 0.16081 1.4509 0.48098 1.8168 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h3.842v31.389h-3.842c-0.77756 0-1.3375 0.18326-1.6805 0.54914-0.32016 0.34303-0.48098 0.93755-0.48098 1.7837 0 0.84617 0.16081 1.4529 0.48098 1.8188 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h16.157c3.5905 0 6.7483-0.81233 9.4697-2.4361 2.7215-1.6466 4.8247-4.0023 6.3112-7.0668 1.5094-3.0645 2.2647-6.6764 2.2647-10.839s-0.75533-7.7761-2.2647-10.841c-1.4865-3.0874-3.5897-5.443-6.3112-7.0668-2.7215-1.6466-5.8792-2.4692-9.4697-2.4692zm42.126 0c-0.77757 0-1.3375 0.18127-1.6805 0.54719-0.32016 0.34303-0.48098 0.9395-0.48098 1.7857 0 0.84617 0.16081 1.4509 0.48098 1.8168 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h3.4993v31.389h-3.4993c-0.77757 0-1.3375 0.18326-1.6805 0.54914-0.32016 0.34303-0.48098 0.93755-0.48098 1.7837 0 0.84617 0.16081 1.4529 0.48098 1.8188 0.34303 0.34303 0.90296 0.51409 1.6805 0.51409h30.668c0.77756 0 1.3253-0.17104 1.6455-0.51409 0.34304-0.36591 0.51603-0.97261 0.51603-1.8188v-10.188c0-0.80043-0.1954-1.3725-0.58419-1.7156-0.38878-0.34303-1.0525-0.51409-1.9901-0.51409-0.93765 0-1.5994 0.17104-1.9882 0.51409-0.38878 0.34303-0.58419 0.91514-0.58419 1.7156v7.8554h-19.039v-13.995h8.8505v3.1215c0 0.80043 0.17104 1.3725 0.51409 1.7156 0.36591 0.34303 1.0072 0.51409 1.922 0.51409 0.91479 0 1.5439-0.17104 1.8869-0.51409 0.36591-0.34303 0.54914-0.91514 0.54914-1.7156v-10.909c0-0.80043-0.18322-1.3725-0.54914-1.7156-0.34303-0.34303-0.97215-0.51409-1.8869-0.51409-0.91477 0-1.5561 0.17104-1.922 0.51409-0.34303 0.34303-0.51409 0.91514-0.51409 1.7156v3.1215h-8.8505v-12.728h18.353v6.3813c0 0.80043 0.19345 1.3725 0.58224 1.7156 0.38878 0.34303 1.0525 0.51409 1.9901 0.51409 0.93765 0 1.6014-0.17104 1.9902-0.51409 0.38878-0.34303 0.58224-0.91514 0.58224-1.7156v-8.7122c0-0.84618-0.17103-1.4426-0.51408-1.7857-0.3202-0.36591-0.86791-0.54719-1.6455-0.54719zm39.725 0c-0.77757 0-1.3394 0.18127-1.6825 0.54719-0.32016 0.34303-0.47904 0.9395-0.47904 1.7857 0 0.84617 0.15885 1.4509 0.47904 1.8168 0.34303 0.34303 0.9049 0.51409 1.6825 0.51409h2.6055l12.213 34.58c0.27441 0.77757 0.6979 1.3375 1.2696 1.6805 0.5946 0.36591 1.3826 0.54914 2.366 0.54914 1.0063 0 1.7962-0.17299 2.3679-0.51604 0.59461-0.34303 1.0405-0.91319 1.3378-1.7136l12.315-34.58h2.6406c0.77757 0 1.3272-0.17104 1.6474-0.51409 0.34304-0.36591 0.51409-0.97066 0.51409-1.8168 0-0.84618-0.17104-1.4426-0.51409-1.7857-0.32019-0.36591-0.86985-0.54719-1.6474-0.54719h-11.456c-0.77758 0-1.3394 0.18127-1.6825 0.54719-0.32016 0.34303-0.47903 0.9395-0.47903 1.7857 0 0.84617 0.15885 1.4509 0.47903 1.8168 0.34304 0.34303 0.90491 0.51409 1.6825 0.51409h3.4292l-10.599 30.325-10.498-30.325h4.8371c0.77755 0 1.3272-0.17104 1.6474-0.51409 0.34303-0.36591 0.51409-0.97066 0.51409-1.8168 0-0.84618-0.17104-1.4426-0.51409-1.7857-0.32016-0.36591-0.86986-0.54719-1.6474-0.54719zm-72.862 4.6638h6.3794c2.7215 0 5.0893 0.60668 7.1018 1.8188 2.0125 1.2121 3.568 2.9956 4.6657 5.3512 1.0977 2.3327 1.6455 5.181 1.6455 8.5428s-0.54774 6.2204-1.6455 8.5759c-1.0977 2.3327-2.6532 4.104-4.6657 5.3161-2.0125 1.1892-4.3803 1.7837-7.1018 1.7837h-6.3794z"/>
+            <path id="dev-themes-logo-themes" d="m402.02 29.5c-11.523 0.1141-16.429 8.0991-16.429 19.736 0 22.019 30.577 21.335 30.577 41.528 0 9.6973-3.7661 17.341-14.262 17.341s-14.26-7.6434-14.26-17.341v-3.9939h-2.3952v3.879c0 11.066 4.5622 19.851 16.655 19.851 12.207 0 16.772-8.7845 16.772-19.851 0-21.676-30.577-21.105-30.577-41.526 0-9.4691 3.5383-17.343 14.034-17.343 10.382 0 13.917 7.9865 13.917 17.456v1.5968h2.5101v-1.4819c0-10.952-4.4492-19.851-16.542-19.851zm-237.53 0.57056v2.3952h17.456v77.464h2.5081v-77.464h17.456v-2.3952zm44.402 0v79.859h2.5101v-38.788h28.863v38.788h2.5101v-79.859h-2.5101v38.788h-28.863v-38.788zm42.691 0v79.859h30.462v-2.3952h-27.952v-36.964h23.502v-2.2822h-23.502v-35.823h27.952v-2.3952zm39.041 0v79.859h2.2803v-76.095l19.738 75.867h2.8528l19.621-75.867v76.095h2.5101v-79.859h-3.879l-19.623 75.752-19.621-75.752zm55.81 0v79.859h30.462v-2.3952h-27.952v-36.964h23.502v-2.2822h-23.502v-35.823h27.952v-2.3952z"/>
+          </svg>
+          <h5>Code</h5>
+          <pre class="language-css"><code class="language-css">#dev-themes-logo{
+  width:297px;
+  transition:all ease 150ms;
+}
+.scrolled #dev-themes-logo{
+  width:150px;
+}</code></pre>
+          <h3 id="scrollindicator">Scroll Indicator</h3>
+          <p>Zeigt in einem Horizontalen Balken an wie weit bereits gescrollt wurde</p>
+          <h3 id="scrollto">Scroll to</h3>
+          <p>Scroll to erweitert langweilige HTML Sprungmarken und fügt diesen einen Scrolleffekt hinzu.</p>
+          <h4>Beispiel</h4>
+          <h5>Klicke auf den Link</h5>
+          <a rel="scrollto" class="to-top" href="#top">Gehe ganz nach oben</a>
+          <h5>Code</h5>
+          <pre class="language-html"><code class="language-html">&lt;a rel="scrollto" href="#top"&gt;Gehe ganz nach oben&lt;/a&gt;</code></pre>
+          <p>Das Attribut "rel" muß den Wert "scrollto" eingetragen haben und es muß auf der Seite ein Element mit der ID des Hashwertes des "href" Attributs geben.</p>
+
+          <h4>Beispiel</h4>
+          <h5>Klicke auf den Button</h5>
+          <button rel="scrollto" class="to-top" data-href="#top">Gehe ganz nach oben</button>
+          <h5>Code</h5>
+          <pre class="language-html"><code class="language-html">&lt;button rel="scrollto" data-href="#top"&gt;Gehe ganz nach oben&lt;/button&gt;</code></pre>
+          <p>Das Attribut "rel" muß den Wert "scrollto" eingetragen haben und es muß auf der Seite ein Element mit der ID des Hashwertes des "data-href" Attributs geben.</p>
+
+          
+          <h3 id="youtube">Youtube Einbettung DSGVO konform (Click to play)</h3>
+          <p>Ich bin ein Beispiel</p>
+        </div>
+        <div class="content content-extra">
+          <div class="large-box"></div>
+        </div>
+      </article>
+    </main>
+    
+    <footer>
+      <h5>beste seite auf der welt</h5>
+      <button rel="scrollto" data-href="#top">to top</button>
+    </footer>
+    <div class="background"></div>
+    <script>
+    // Custom page actions
+    ;(function(){
+      'use strict';
+      
+      /**
+       * @var {object} sandboxTheme_data
+       */
+      var sandboxTheme_data = {
+        id: 1,
+        slug: 'sandboxTheme-js',
+        title: 'sandboxTheme JS',
+        info: {
+          is_front_page: true,
+          is_archive: false,
+        }
+      };
+      
+      /**
+       * @namespace sandboxTheme
+       */
+      window.sandboxTheme = window.sandboxTheme || {};
+      
+      if ( typeof sandboxTheme.init === 'function' ) {
+        sandboxTheme.init(sandboxTheme_data);
+      }
+    })();
+    </script>
+  </body>
+</html>
+

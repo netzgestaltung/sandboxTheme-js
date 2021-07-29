@@ -1,0 +1,82 @@
+/**
+ * Usage example for accordeon sandboxTheme JS feature with animated icon.
+ */
+
+/**
+ * minimum setup
+ */
+.accordeon-heading a{
+  display:block;
+}
+.accordeon-content > *:first-child{
+  margin-top:0;
+}
+.accordeon-content > *:last-child{
+  margin-bottom:0;
+}
+
+/**
+ * Eyecandy, change for your needs
+ */
+.accordeon-heading a{
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+}
+.accordeon-content{
+  padding:1.5em 2em 1.5em 0;
+  border-right:1px solid #FFE2E5;
+}
+
+/**
+ * Chevron icon with animated active status
+ * 
+ * Icon requires icon-font "materialize" or "forkawesome" or other.
+ * The content value will vary from font to font.
+ */
+.accordeon-heading a{
+  position:relative;
+  padding:0.5em 3em 0.5em 0;
+}
+.accordeon-heading a::after {
+  display:block;
+  position:absolute;
+  right:0.5em;
+  top:0.3333333333em;
+  font-size:1.5em;
+  line-height:1;
+  font-family:'Material Icons';
+  font-weight:normal;
+  font-style:normal;
+  letter-spacing:normal;
+  text-transform:none;
+  white-space:nowrap;
+  word-wrap:normal;
+  direction:ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing:antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering:optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing:grayscale;
+  /* Support for IE. */
+  font-feature-settings:'liga';
+  speak:never;
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  transform:rotate(90deg);
+  -webkit-transition:transform 300ms ease;
+  -moz-transition:transform 300ms ease;
+  -ms-transition:transform 300ms ease;
+  -o-transition:transform 300ms ease;
+  transition:transform 300ms ease;
+  content:'arrow_forward_ios';
+}
+.accordeon-heading.active a::after {
+  -moz-transform:rotate(-90deg);
+  -webkit-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  transform:rotate(-90deg);
+}

@@ -36,6 +36,16 @@
     scrolled: {
     
       /**
+       * @member   {object}  config  feature options. 
+       * @property {number}  offset  the scroll treshold pixel value when to trigger the switch
+       * 
+       * @memberof andboxTheme.features.scrolled
+       */
+      config: {
+        offset: 100
+      },
+    
+      /**
        * @member  {object}  info  gerneral purpose data storage. 
        *
        * Gets also created by sandboxTheme.init() if not present
@@ -71,7 +81,7 @@
        * }
        */
       scroll: function(){
-        if (this.$window.scrollTop() > 100){
+        if ( this.$window.scrollTop() > this.config.offset ) {
           if ( !this.info.isScrolled ) {
             this.info.isScrolled = true;
             document.body.classList.add(this.info.class_name);
