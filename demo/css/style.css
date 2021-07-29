@@ -305,6 +305,11 @@ section[id] > h2::before{
 section[id] > h2::before{
   left:0;
 }
+.menu .item-dev       a::before { content:'code'; }
+.menu .item-docs      a::before { content:'description'; }
+.menu .item-features  a::before { content:'settings'; }
+.menu .item-about     a::before { content:'batch_prediction'; }
+
 .menu .item-feature   a::before { content:'flaky'; }
 .menu .item-accordeon a::before { content:'arrow_drop_down_circle'; }
 .menu .item-scrolled  a::before { content:'system_update_alt'; }
