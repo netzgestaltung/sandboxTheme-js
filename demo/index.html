@@ -58,24 +58,41 @@
           <li class="menu-item item-feature"><a rel="scrollto" href="#feature">Feature</a></li>
           <li class="menu-item item-accordeon"><a rel="scrollto" href="#accordeon">Accordeon</a></li>
           <li class="menu-item item-scrolled"><a rel="scrollto" href="#scrolled">Scrolled</a></li>
-          <!-- <li class="menu-item item-scrollindicator"><a rel="scrollto" href="#scrollindicator">Scrollindicator</a></li> -->
+          <li class="menu-item item-scrollindicator"><a rel="scrollto" href="#scrollindicator">Scrollindicator</a></li>
           <li class="menu-item item-scrollto"><a rel="scrollto" href="#scrollto">Scrollto</a></li>
+          <li class="menu-item item-youtube_embed"><a rel="scrollto" href="#youtube_embed">Youtube Embed</a></li>
         </ol>
+        <!--
         <h3>ABOUT</h3>
         <p>Diese Webstie soll ein paar wichtige Aktionen erklären die sich sehr nützlich und hilfreich für deine nächste Websitedarstelle können.</p>
         <br>
         <p>Als aller erstes wir erklärt wofür SVG verwendet wird und die Vorteile von SVG</p>
         <br>
         <p>Danach wird die Accordeon Function erklärt.Zum Beispiel wofür sie genutzt wir und was diese Function überhaupt machen kann</p>
+      -->
       </aside>
       <article id="content">
         <h1 class="title">sandboxTheme JS Demo Seite</h1>
         <section id="feature">
           <h2>Feature</h2>
           <div class="content">
-            <p>Feature ist eine art Grundaufbau. Du kannst dieses Feature einfach als Codebasis verwenden.</p>
+            <p>Feature ist das Grundgerüst eines Features. Du kannst dieses Feature einfach als Codebasis verwenden.</p>
             <p>In Feature gibt es sehr viele Erklärungen zu jeder einzelnen Methode.</p>
             <p>In der Javascript-Console deines Browsers kannst du die Logs von Feature ansehen.</p>
+            <h3>Config</h3>
+            <pre class="language-js"><code class="language-js">options: {
+  classNames:{
+    active: 'active',
+    dummy: 'dummy'
+  },
+  selectors: {
+    container: '.feature-dummy',
+    dummy: '.dummy',
+  },
+  texts: {
+    dummy: 'move your mouse over the box'
+  }        
+},</code></pre>
             <h3>Beispiel</h3>
             <div class="feature-dummy">
               <h4>Dummy Box</h4>
@@ -87,16 +104,50 @@
         <section id="accordeon">
           <h2>Accordeon</h2>
           <div class="content">
-            <p>Das Accordeon ist eine Javascript action die sehr text basiert ist. Diese Funtion umschließt Text und macht ihn damit unsichtbar aber mit einem Klick kann man diese versteckten Texte einfach wieder anzeigen lassen.</p>
-            <p>Alle h3 die in dieser main Function sind werden zu accordeons wenn man eines von diesen accordeon anklickt wird eine smoothe animation ausgeführt und der verborgene Text kann gelesen werden.</p>
+            <p>Zeigt und versteckt Inhalte, die sich in einem konfigurierbaren Container befinden, gruppiert nach Überschriften, die ebenfalls konfiguriert werden können.</p>
+            <h3>Config</h3>
+            <p>Alle Überschriften "H3", die in einen Element mit ".content" class Attribut enthalten sind, verstecken alle darauf folgenden Inhalte bis zur jeweils nächsten "H3" Überschrift.</p>
+            <pre class="language-js"><code class="language-js">options: {
+  /**
+   * Index of Accordeon to open.
+   * 
+   * First number is the index of the content if there are more then one.
+   * Second number ist the index of the accordeon in that content to open.
+   * Empty string let all accordeons be closed exept there is a hash opener in the URL.
+   * 
+   * @type {String} String containing two numbers. 
+   * @example
+   * '01' Opens the second accordeon in the first content occurances
+   */
+  open_index: '',
+  selectors: {
+    content: '.content',
+    heading: 'h3'
+  },
+  classNames: {
+    heading: 'heading',
+    content: 'content',
+    active: 'active',
+    enabled: 'enabled',
+  }
+},</code></pre>
+            <p><strong>open_index:</strong> Legt fest, welches accordeon beim Seitenladen geöffnet sein soll.</p>
+            <p>Wird von einem Hash, beispielsweise "#accordeon-02" überschrieben.</p>
+            <p><strong>selectors:</strong> Legt die Container- und Überschriftenelemente fest.</p>
             <h3>Beispiel</h3>
             <p>Ich bin ein Beispiel</p>
+            <h4>HTML</h4>
+            <pre class="language-html"><code class="language-html">&lt;div class="content"&gt;
+  &lt;h3&gt;Beispiel&lt;/h3&gt;
+  &lt;p&gt;Ich bin ein Beispiel&lt;/p&gt;   
+&lt;/div&gt;</code></pre>
           </div>
         </section>
         <section id="scrolled">
           <h2>Scrolled</h2>
           <div class="content">
           <p>Überwacht ob vom Beginn der Seite aus gescrollt wurde und fügt dem HTML "body" Element eine Klasse "scrolled" hinzu wenn es zutrifft.</p>
+          <h3>Config</h3>
           <pre class="language-js"><code class="language-js">/**
  * @member   {object}  config  feature options. 
  * @property {number}  offset  the scroll treshold when to trigger the switch
@@ -134,41 +185,73 @@ config: {
           <h2>Scroll Indicator</h2>
           <div class="content">
             <p>Zeigt in einem Horizontalen Balken an wie weit bereits gescrollt wurde</p>
-            <progress id="scroll-indicator" class="indicator scroll" value="2410" max="13247"></progress>
+            <h3>Config</h3>
+            <pre class="language-js"><code class="language-js">options: {
+  selectors: {
+    progress: '#scroll-indicator',
+  }
+},</code></pre>
+            <h3>Beispiel</h3>
+            <progress id="scroll-indicator" class="indicator scroll" value="0"></progress>
+            <h4>HTML</h4>
+            <pre class="language-html"><code class="language-html">&lt;progress id="scroll-indicator" class="indicator scroll" value="0"&gt;&lt;/progress&gt;</code></pre>
           </div>
         </section>
         <section id="scrollto">
           <h2>Scroll to</h2>
           <div class="content">
             <p>Scroll to erweitert langweilige HTML Sprungmarken und fügt diesen einen Scrolleffekt hinzu.</p>
-            <h3>Beispiel</h3>
+            <h3>Config</h3>
+            <pre class="language-js"><code class="language-js">options: {
+  /**
+   * options for the scrollIntoView method
+   * @link https://developer.mozilla.org/de/docs/Web/API/Element/scrollIntoView
+   */
+  scrollIntoViewOptions: {
+    behavior:'smooth'
+  }
+},</code></pre>
+            <h3>Beispiele</h3>
             <h4>Klicke auf den Link</h4>
             <a rel="scrollto" class="to-top" href="#top">Gehe ganz nach oben</a>
             <h4>Code</h4>
             <pre class="language-html"><code class="language-html">&lt;a rel="scrollto" href="#top"&gt;Gehe ganz nach oben&lt;/a&gt;</code></pre>
             <p>Das Attribut "rel" muß den Wert "scrollto" eingetragen haben und es muß auf der Seite ein Element mit der ID des Hashwertes des "href" Attributs geben.</p>
-            <h3>Beispiel</h3>
             <h4>Klicke auf den Button</h4>
             <button rel="scrollto" class="to-top" data-href="#top">Gehe ganz nach oben</button>
-            <h4>Code</h4>
+            <h4>HTML</h4>
             <pre class="language-html"><code class="language-html">&lt;button rel="scrollto" data-href="#top"&gt;Gehe ganz nach oben&lt;/button&gt;</code></pre>
             <p>Das Attribut "rel" muß den Wert "scrollto" eingetragen haben und es muß auf der Seite ein Element mit der ID des Hashwertes des "data-href" Attributs geben.</p>
           </div>
         </section>
-        <section id="youtube">
-          <h2>Youtube Einbettung DSGVO konform (Click to play)</h2>
+        <section id="youtube_embed">
+          <h2>Youtube Einbettung DSGVO</h2>
           <div class="content">
             <p>Eine Figure mit einem Link zu einem Youtube Video und einem Lokalen Vorschaubild werden auf Klick zu einem Youtube Iframe.</p>
             <p>In der Figcaption ist der nötige Hinweis zur Datenschutzerklärung einzugeben.</p>
+            <h3>Config</h3>
+            <pre class="language-js"><code class="language-js">options: {
+  youtube_api_src: 'https://www.youtube.com/iframe_api',
+  autoplay: true,
+  classNames:{
+    preview: 'youtube-preview',
+    iframe: 'youtube-iframe',
+  },
+  selectors: {
+    preview: 'figure.youtube-preview',
+    caption: 'figcaption',
+    api_script: '#youtube-api',
+  }
+},</code></pre>
             <h3>Beispiel</h3>
             <figure class="youtube-preview">
               <a target="_blank" rel="noopener, noreferrer" href="https://youtu.be/aqz-KE-bpKQ"><img src="img/big-buck-bunny-preview.jpg" /></a>
               <figcaption>Mit Klick auf das Vorschaubild wir eine Verbindung zu Youtube aufgebaut. Lesen Sie sich unsere <a href="../datenschutzerklaerung.html">Datenschutzerklärung</a> durch!</figcaption>
             </figure>
-            <h4>Code</h4>
-          <pre class="language-css"><code class="language-css">&lt;figure class="youtube-preview"&gt;
+            <h4>HTML</h4>
+          <pre class="language-html"><code class="language-html">&lt;figure class="youtube-preview"&gt;
   &lt;a target="_blank" rel="noopener, noreferrer" href="https://youtu.be/aqz-KE-bpKQ"&gt;&lt;img src="img/big-buck-bunny-preview.jpg" /&gt;&lt;/a&gt;
-  &lt;figcaption&gt;Mit Klick auf das Vorschaubild wir eine Verbindung zu Youtube aufgebaut. Lesen Sie sich unsere &lt;a href="../datenschutzerklaerung.html"&gt;Datenschutzerklärung&lt;/a&gt; durch!&lt;/figcaption&gt;
+  &lt;figcaption&gt;Mit Klick auf das Vorschaubild wird eine Verbindung zu Youtube aufgebaut. Lesen Sie sich unsere &lt;a href="../datenschutzerklaerung.html"&gt;Datenschutzerklärung&lt;/a&gt; durch!&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
           </div>
         </section>

@@ -176,7 +176,7 @@
         console.log('Feature "' + this.info.name + '" finished setup and ready methods');
       },
       setup: function(){
-        var is_setup = false; // is_allowed_page && !( is_denied_permanet || is_denied_by_url );
+        var is_setup = true; // is_allowed_page && !( is_denied_permanet || is_denied_by_url );
 
         console.log('Document is laoded and "' + this.info.name + '" setup API method executed');
 

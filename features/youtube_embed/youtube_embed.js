@@ -15,9 +15,19 @@
     /**
      * Youtube embed
      * 
+     * Example YouTube URL formats
+     * * http://www.youtube.com/embed?v=aqz-KE-bpKQ
+     * * http://www.youtube.com/watch?v=aqz-KE-bpKQ
+     * * https://youtu.be/aqz-KE-bpKQ
+     *
+     * Download the Youtube Preview image from here
+     * @link https://get-youtube-video-thumbnail-image.com
+     *
+     * Upload it to your server and use it as preview image src attribute
+     * 
      * @example
      * <figure class="youtube-preview">
-     *   <a href="https://youtu.be/aqz-KE-bpKQ"><img src="../img/big-buck-bunny-preview.jpg" /></a>
+     *   <a href="https://youtu.be/aqz-KE-bpKQ"><img src="img/big-buck-bunny-preview.jpg" /></a>
      *   <figcaption>Mit Klick auf das Vorschaubild wir eine Verbindung zu Youtube aufgebaut. Lesen Sie sich unsere <a href="../datenschutzerklaerung.html">Datenschutzerklärung</a> durch!</figcaption>
      * </figure>
      */
@@ -38,11 +48,10 @@
       templates:{
         'api_script': '<script id="youtube-api">',
       },
-      info: {}, // will be filled automagic with "name" -> info.name = dummy
       youtube_parser: function youtube_parser(url){
         var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
         var match = url.match(regExp);
-        return (match&&match[7].length==11)? match[7] : false;
+        return ( match && match[7].length === 11 ) ? match[7] : false;
       },
       events: function events(){
         var classNames = this.options.classNames,

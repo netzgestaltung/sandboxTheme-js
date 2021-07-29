@@ -310,7 +310,7 @@ section[id] > h2::before{
 .menu .item-scrolled  a::before { content:'system_update_alt'; }
 .menu .item-scrollindicator  a::before { content:'blur_linear'; }
 .menu .item-scrollto  a::before { content:'swap_calls'; }
-.menu .item-youtube   a::before { content:'play_circle_filled'; }
+.menu .item-youtube_embed   a::before { content:'play_circle_filled'; }
 .menu .item-to-top    a::before,
 .to-top::before                 { content:'arrow_circle_up'; }
 
@@ -319,7 +319,7 @@ section[id] > h2::before{
 #scrolled  > h2::before { content:'system_update_alt'; }
 #scrollindicator  > h2::before { content:'blur_linear'; }
 #scrollto  > h2::before { content:'swap_calls'; }
-#youtube   > h2::before { content:'play_circle_filled'; }
+#youtube_embed > h2::before { content:'play_circle_filled'; }
 
 .sidebar{
 }
