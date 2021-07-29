@@ -432,6 +432,20 @@
         } else {
           throw new Error('Param "class_name" is not a string');
         }
+      },
+
+      /**
+       * get the width and height of the viewport.
+       *
+       * @link https://github.com/netzgestaltung/jquery.get_viewportSize/
+       * @ Copyright 2015 nexxar/Thomas Fellinger
+       * @ License GPLv2
+       */
+      get_viewport_size: function(){
+        return {
+          width: window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+          height: window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+        };
       }
     };
   })();

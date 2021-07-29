@@ -20,7 +20,7 @@
  */
 .accordeon-heading a{
   text-decoration:none;
-  border-bottom:1px solid currentColor;
+  border-bottom:1px solid #C7C7C7;
 }
 .accordeon-content{
   padding:1.5em 2em 1.5em 0;
@@ -47,6 +47,7 @@
   font-family:'Material Icons';
   font-weight:normal;
   font-style:normal;
+  color:#C7C7C7;
   letter-spacing:normal;
   text-transform:none;
   white-space:nowrap;

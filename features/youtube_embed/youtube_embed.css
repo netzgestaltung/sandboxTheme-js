@@ -1,0 +1,75 @@
+/**
+ * Usage example for youtube embed sandboxTheme JS feature with 16: 9 responsive container and play button.
+ */
+
+/**
+ * container for non-responsive elements
+ *
+ * youtube/video 16:9 iframe
+ * @see  https://benmarshall.me/responsive-iframes
+ */
+.youtube-preview{
+  overflow:hidden;
+  padding-top:56.25%; /* 16:9 aspect ratio */
+  position:relative;
+}
+.youtube-preview > iframe,
+.youtube-preview > a{
+  border:0;
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  width:100%;
+}
+
+/* youtube injection preview icon */
+.youtube-preview > a{
+  display:block;
+}
+.youtube-preview > a::before{
+  display:block;
+  position:absolute;
+  top:calc(50% - 0.5em);
+  left:calc(50% - 0.75em);
+  height:1em;
+  width:1.5em;
+  line-height:1;
+  font-size:4em;
+  color:#433B33;
+  text-align:center;
+  font-family:'Material Icons';
+  content:'play_circle_filled';
+  text-rendering:auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index:50;
+}
+.youtube-preview > a::after{
+  display:block;
+  position:absolute;
+  top:calc(50% - 0.75em);
+  left:calc(50% - 1em);
+  height:1.5em;
+  width:2em;
+  background:#FFFFFF;
+  content:' ';
+  z-index:40;
+}
+.youtube-preview > a:hover::before,
+.youtube-preview > a:active::before{
+  color:#FF0000;
+}
+.youtube-preview a img{
+  margin:0;
+}
+.youtube-preview > figcaption{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:1em 1.5em;
+  font-size:0.8em;
+  background:rgba(0, 0, 0, 0.5);
+  color:#FFFFFF;
+}
