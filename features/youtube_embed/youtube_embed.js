@@ -100,12 +100,6 @@
           event.preventDefault();
         });
       },
-      resize: function resize(){
-        console.log('resized and ' + this.info.name + ' API function called');
-      },
-      scroll: function resize(){
-        console.log('scrolled and ' + this.info.name + ' API function called');
-      },
       ready: function ready(){
         var classNames = this.options.classNames,
             selectors = this.options.selectors,

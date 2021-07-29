@@ -81,7 +81,7 @@
        * }
        */
       scroll: function(){
-        if ( this.$window.scrollTop() > this.config.offset ) {
+        if ( window.scrollY > this.config.offset ) {
           if ( !this.info.isScrolled ) {
             this.info.isScrolled = true;
             document.body.classList.add(this.info.class_name);

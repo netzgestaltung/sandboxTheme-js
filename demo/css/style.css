@@ -184,7 +184,7 @@ pre[class*="language-"] {
   margin:0.5em 0;
   overflow:auto;
   border:1px solid #E2E2E2;
-  background-color:#FFE2E5;
+  background-color:#FFECEE;
 }
 
 pre[class*="language-"]  > code[class*="language-"]{
@@ -251,11 +251,11 @@ pre[class*="language-"] {
   line-height:1;
 }
 .sidebar .menu a{
-  background-color:rgba(255, 226, 229, 0.65);
+  background-color:#FFECEE;
 }
 .to-top{
   display:inline-block;
-  background-color:rgba(255, 226, 229, 0.65);
+  background-color:#FFECEE;
 }
 section[id] > h2{
   position:relative;
@@ -279,7 +279,7 @@ section[id] > h2{
 .sidebar .menu a:active,
 .to-top:hover,
 .to-top:active{
-  background-color:rgba(255, 226, 229, 1);
+  background-color:#FFE2E5;
 }
 .menu .menu-item a::before,
 .to-top::before,

@@ -22,17 +22,21 @@
     scrollindicator: {
       options: {
         selectors: {
-          progress: '#scroll-indicator',
+          progress: 'progress.scroll',
         }
       },
       resize: function resize(){
         if ( this.info.is_active ) {
-          this.$progress.attr('max', $(document).height() - sandboxTheme.get_viewport_size().height);
+          this.progresses.forEach(function(progress){
+            progress.setAttribute('max', document.body.scrollHeight - sandboxTheme.get_viewport_size().height);
+          });
         }
       },
       scroll: function scroll(){
         if ( this.info.is_active ) {
-          this.$progress.attr('value', $(window).scrollTop());
+          this.progresses.forEach(function(progress){
+            progress.setAttribute('value', window.scrollY);
+          });
         }
       },
       load: function load(){
@@ -42,8 +46,8 @@
         }
       },
       ready: function ready(){
-        this.$progress = $(this.options.selectors.progress);
-        this.info.is_active = this.$progress.length > 0;
+        this.progresses = document.querySelectorAll(this.options.selectors.progress);
+        this.info.is_active = this.progresses.length > 0;
       },
       setup: function setup(){
         var isSetup = true;
