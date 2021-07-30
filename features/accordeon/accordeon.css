@@ -28,7 +28,7 @@
 }
 
 /**
- * Chevron icon with animated active status
+ * Chevron icon with animated opened status
  * 
  * Icon requires icon-font "materialize" or "forkawesome" or other.
  * The content value will vary from font to font.
@@ -74,7 +74,7 @@
   transition:transform 300ms ease;
   content:'arrow_forward_ios';
 }
-.accordeon-heading.active a::after {
+.accordeon-heading.opened a::after {
   -moz-transform:rotate(-90deg);
   -webkit-transform:rotate(-90deg);
   -o-transform:rotate(-90deg);

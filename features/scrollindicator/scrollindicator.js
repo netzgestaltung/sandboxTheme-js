@@ -13,11 +13,16 @@
   sandboxTheme.features = $.extend(true, sandboxTheme.features || {}, {
 
     /**
+     * @member  {object}  scrollindicator
      * Scroll Indicator
-     * ================
+     * 
      * Indicates the scrolled distance
      * in percent relative to the viewport
      * as a progress bar
+     *
+     * @memberof sandboxTheme.features
+     * @example
+     * <progress class="indicator scroll" value="0"></progress>
      */        
     scrollindicator: {
       options: {

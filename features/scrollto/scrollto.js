@@ -15,19 +15,13 @@
     // add features here
     
     /**
-     * scrollto scroll to a given hash value
+     * @member  {object}  scrollto
+     * scroll to a given hash value
      * 
+     * @memberof sandboxTheme.features
      * @example
      * <a href="#top" rel="srollto">scroll to top</a>
      * <button data-href="#top" rel="srollto">scroll to top</button>
-     * 
-     * @name   key        enter the name of the feature as features['key']. It gets used automaticly later
-     *                    access in methods with "this.info.name"      
-     * 
-     * @data   options    optional  this is the configuration part. its structure is only a convention i use. 
-     *                    you can also add your variables directly to the feature root but i prefer it that way but an empty object will be created anyways.
-     *                    access in methods with "this.options"
-     *
      */
     scrollto: {
       options: {

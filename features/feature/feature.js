@@ -17,7 +17,7 @@
     
     /**
      * Feature
-     * =======
+     * 
      * Feature to see the api working
      *
      * @name   key        enter the name of the feature as features['key']. It gets used automaticly later

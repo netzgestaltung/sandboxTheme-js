@@ -11,23 +11,27 @@
    * @memberof sandboxTheme
    */
   sandboxTheme.features = $.extend(true, sandboxTheme.features || {}, {
-
+    
     /**
-     * Youtube embed
+     * @member  {object}  youtube_embed
+     * Youtube embed GPDR/DSGVO conform
      * 
      * Example YouTube URL formats
-     * * http://www.youtube.com/embed?v=aqz-KE-bpKQ
-     * * http://www.youtube.com/watch?v=aqz-KE-bpKQ
+     * * https://www.youtube.com/embed?v=aqz-KE-bpKQ
+     * * https://www.youtube.com/watch?v=aqz-KE-bpKQ
      * * https://youtu.be/aqz-KE-bpKQ
      *
      * Download the Youtube Preview image from here
-     * @link https://get-youtube-video-thumbnail-image.com
+     * {@link https://get-youtube-video-thumbnail-image.com}
      *
      * Upload it to your server and use it as preview image src attribute
      * 
+     * @memberof sandboxTheme.features
      * @example
      * <figure class="youtube-preview">
-     *   <a href="https://youtu.be/aqz-KE-bpKQ"><img src="img/big-buck-bunny-preview.jpg" /></a>
+     *   <a href="https://youtu.be/aqz-KE-bpKQ">
+     *     <img src="img/big-buck-bunny-preview.jpg" />
+     *   </a>
      *   <figcaption>Mit Klick auf das Vorschaubild wir eine Verbindung zu Youtube aufgebaut. Lesen Sie sich unsere <a href="../datenschutzerklaerung.html">Datenschutzerklärung</a> durch!</figcaption>
      * </figure>
      */

@@ -10,6 +10,11 @@
    * - global namespace of the lib in the window object
    * - you can change the name with search/replace
    * 
+   * @author Thomas Fellinger <office@netzgestaltung.at>
+   * @copyright Thomas Fellinger 2014-2021
+   * @license GPL-2.0-or-later
+   * @see {@link https://github.com/netzgestaltung/sandboxTheme-js}
+   * 
    * @namespace  sandboxTheme
    */
   window.sandboxTheme = (function(){
@@ -435,16 +440,23 @@
       },
 
       /**
-       * get the width and height of the viewport.
+       * Get the width and height of the viewport.
        *
-       * @link https://github.com/netzgestaltung/jquery.get_viewportSize/
-       * @ Copyright 2015 nexxar/Thomas Fellinger
-       * @ License GPLv2
+       * @see {@link https://github.com/netzgestaltung/jquery.get_viewportSize/}
+       * @copyright nexxar/Thomas Fellinger 2015
+       * @license GPL-2.0-or-later
+       * 
+       * @memberof sandboxTheme
+       * @example 
+       * var viewport_size = sandboxTheme.get_viewport_size(),
+       *     viewport_height = viewport_size.height;
+       *
+       * @return  {object}  viewport_size contains a width and a height value.
        */
       get_viewport_size: function(){
         return {
-          width: window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
-          height: window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+          width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+          height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
         };
       }
     };

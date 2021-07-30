@@ -14,10 +14,28 @@
 
 
     /**
-     * accordeon
+     * @member  {object}  accordeon
+     * Accordeon
+     * 
+     * Hides or shows content between configured heading elements inside a configured container element.
+     * The headings turn to triggers to open or close an accordeon segment.
+     * Open/Close is animated with jQuery slideUp/slideDown methods.
+     * 
+     * @memberof sandboxTheme.features
+     * @example
+     * <div class="content">
+     *   <h3>Example heading</h3>
+     *   <p>Example content</p>
+     * </div>
      */
     accordeon: {
       options: {
+        /**
+         * Speed of the slideUp/Down animation in MS
+         * @type {Number}
+         */
+        duration: 300,
+
         /**
          * Index of Accordeon to open.
          * 
@@ -30,24 +48,49 @@
          * '01' Opens the second accordeon in the first content occurances
          */
         open_index: '',
+
+        /**
+         * where to look for accordion container and headings
+         * 
+         * @type      {Object}
+         * @property  {String}  container  CSS selector for the container of the headings
+         * @property  {String}  heading    CSS selector for the headings
+         */
         selectors: {
-          content: '.content',
+          container: '.content',     
           heading: 'h3'
         },
+
+        /**
+         * you will find these class names combined with the features name so you can style it
+         * 
+         * @type      {Object}
+         * @property  {String}  heading  Accordion heading class
+         * @property  {String}  content  Accordion content class
+         * @property  {String}  no       Accordion leave out class
+         * @property  {String}  opened   Accordion is opened
+         * @property  {String}  enabled  Global body class is accordeon feature has been enabled
+         */
         classNames: {
           heading: 'heading',
           content: 'content',
-          active: 'active',
+          no: 'no',
+          opened: 'opened',
           enabled: 'enabled',
         }
       },
       templates: {
         div: '<div />',
-        link: '<a href="" />'
       },
-      info: {
 
-      },
+      /**
+       * @method [callback_slideupdown]
+       *
+       * Gets executed after a slideUp/slideDown animation has being finished.
+       * 
+       * Triggers resize and scroll events because the height of the document has changed.
+       * 
+       */
       callback_slideupdown: function(){
         sandboxTheme.trigger('resize');
         sandboxTheme.trigger('scroll');
@@ -63,10 +106,11 @@
       events: function(){
         var selectors = this.options.selectors,
             classNames = this.options.classNames,
+            duration = this.options.duration,
             info = this.info,
             accordeon = this;
 
-        this.contents.forEach(function(content, content_index){
+        this.containers.forEach(function(content, content_index){
           var headings = content.querySelectorAll(selectors.heading),
               child_headings = Array.prototype.filter.call(headings,function(heading){
                 return heading.parentElement === content;
@@ -78,14 +122,16 @@
                 var accordeon_content = document.getElementById(event.target.hash.replace('#', '')),
                     $accordeon_content = $(accordeon_content);
 
-                if ( heading.classList.contains(classNames.active) ) {
-                  heading.classList.remove(classNames.active);
+                if ( heading.classList.contains(classNames.opened) ) {
+                  heading.classList.remove(classNames.opened);
                   window.history.pushState(null, document.title, window.location.pathname + window.location.search);
-                  $accordeon_content.slideUp(300, accordeon.callback_slideupdown);
+
+                  $accordeon_content.slideUp(duration, accordeon.callback_slideupdown);
                 } else {
-                  heading.classList.add(classNames.active);
+                  heading.classList.add(classNames.opened);
                   window.history.pushState(null, document.title, event.target.hash);
-                  $accordeon_content.slideDown(300, function(){
+
+                  $accordeon_content.slideDown(duration, function(){
                     accordeon_content.style.display = accordeon_content.dataset.display;
                     accordeon.callback_slideupdown();
                   });
@@ -96,6 +142,7 @@
           }
         });
       },
+
       /**
        * @method [ready]
        * 
@@ -110,10 +157,9 @@
             templates = this.templates,
             default_open_index = this.options.open_index;
 
-        this.$content = $(selectors.content);
-        this.contents = document.querySelectorAll(selectors.content);
+        this.containers = document.querySelectorAll(selectors.content + ':not(.' + classNames.no '-' + info.class_name + ')');
 
-        this.contents.forEach(function(content, content_index){
+        this.containers.forEach(function(content, content_index){
           var headings = content.querySelectorAll(selectors.heading),
               child_headings = Array.prototype.filter.call(headings,function(heading){
                 return heading.parentElement === content;
@@ -154,7 +200,7 @@
 
             if ( has_open_index && content_index === open_content_index && heading_index === open_heading_index ) {
               // active initialation
-              heading.classList.add(classNames.active);
+              heading.classList.add(classNames.opened);
             } else {
               // inactive initialation
               accordeon_content.style.display = 'none';
@@ -164,7 +210,8 @@
         // $.log(this.$content);
         this.events();
       },
-     /**
+
+      /**
        * @method setup
        * 
        * returns true because its used on every page.

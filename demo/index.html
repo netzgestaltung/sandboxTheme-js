@@ -189,13 +189,13 @@ config: {
             <h3>Config</h3>
             <pre class="language-js"><code class="language-js">options: {
   selectors: {
-    progress: '#scroll-indicator',
+    progress: 'progress.scroll',
   }
 },</code></pre>
             <h3>Beispiel</h3>
-            <progress id="scroll-indicator" class="indicator scroll" value="0"></progress>
+            <progress class="indicator scroll" value="0"></progress>
             <h4>HTML</h4>
-            <pre class="language-html"><code class="language-html">&lt;progress id="scroll-indicator" class="indicator scroll" value="0"&gt;&lt;/progress&gt;</code></pre>
+            <pre class="language-html"><code class="language-html">&lt;progress class="indicator scroll" value="0"&gt;&lt;/progress&gt;</code></pre>
           </div>
         </section>
         <section id="scrollto">
@@ -215,7 +215,7 @@ config: {
             <h3>Beispiele</h3>
             <h4>Klicke auf den Link</h4>
             <a rel="scrollto" class="to-top" href="#top">Gehe ganz nach oben</a>
-            <h4>Code</h4>
+            <h4>HTML</h4>
             <pre class="language-html"><code class="language-html">&lt;a rel="scrollto" href="#top"&gt;Gehe ganz nach oben&lt;/a&gt;</code></pre>
             <p>Das Attribut "rel" muß den Wert "scrollto" eingetragen haben und es muß auf der Seite ein Element mit der ID des Hashwertes des "href" Attributs geben.</p>
             <h4>Klicke auf den Button</h4>
