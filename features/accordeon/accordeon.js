@@ -157,10 +157,10 @@
             templates = this.templates,
             default_open_index = this.options.open_index;
 
-        this.containers = document.querySelectorAll(selectors.content + ':not(.' + classNames.no '-' + info.class_name + ')');
+        this.containers = document.querySelectorAll(selectors.container);
 
         this.containers.forEach(function(content, content_index){
-          var headings = content.querySelectorAll(selectors.heading),
+          var headings = content.querySelectorAll(selectors.heading + ':not(.' + classNames.no + '-' + info.class_name + ')'),
               child_headings = Array.prototype.filter.call(headings,function(heading){
                 return heading.parentElement === content;
               });

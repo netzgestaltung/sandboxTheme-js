@@ -128,7 +128,7 @@
        * }
        */
       resize: function(){
-        console.log('resized and ' + this.info.name + ' resize API method executed');
+        console.log('resized and "' + this.info.name + '" resize API method executed');
       },
 
       /**
