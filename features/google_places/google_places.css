@@ -1,0 +1,51 @@
+/**
+ * Usage example for youtube embed sandboxTheme JS feature with 16: 9 responsive container and play button.
+ */
+
+/**
+ * container for non-responsive elements
+ *
+ * google maps 16:5 iframe
+ * @see  https://benmarshall.me/responsive-iframes
+ */
+.google-preview{
+  overflow:hidden;
+  padding-top:calc(100% / (16 / 5));
+  position:relative;
+  transition:background 300ms ease;
+}
+.google-preview.started{
+  padding-top:300px;
+}
+.google-preview > iframe,
+.google-preview > a{
+  border:0;
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  width:100%;
+  transition:opacity 300ms ease;
+}
+.google-preview > iframe
+.google-preview > a{
+  display:block;
+}
+.google-preview a img{
+  margin:0;
+}
+.google-preview > figcaption{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:1em 1.5em;
+  font-size:0.8em;
+  background:rgba(0, 0, 0, 0.5);
+  color:#FFFFFF;
+}
+.google-preview.started > a,
+.google-preview.started > figcaption{
+  opacity:0;
+  pointer-events:none;
+}

@@ -25,6 +25,9 @@
 
     <script src="../features/youtube_embed/youtube_embed.js"></script>
     <link rel="stylesheet" href="../features/youtube_embed/youtube_embed.css" />
+    
+    <script src="../features/google_places/google_places.js"></script>
+    <link rel="stylesheet" href="../features/google_places/google_places.css" />
   </head>
   <body>
     <div id="top"></div>
@@ -62,6 +65,7 @@
           <li class="menu-item item-scrollindicator"><a rel="scrollto" href="#scrollindicator">Scrollindicator</a></li>
           <li class="menu-item item-scrollto"><a rel="scrollto" href="#scrollto">Scrollto</a></li>
           <li class="menu-item item-youtube_embed"><a rel="scrollto" href="#youtube_embed">Youtube Embed</a></li>
+          <li class="menu-item item-google_places"><a rel="scrollto" href="#google_places">Google Maps Iframe</a></li>
         </ol>
         <!--
         <h3>ABOUT</h3>
@@ -253,6 +257,33 @@ config: {
           <pre class="language-html"><code class="language-html">&lt;figure class="youtube-preview"&gt;
   &lt;a target="_blank" rel="noopener, noreferrer" href="https://youtu.be/aqz-KE-bpKQ"&gt;&lt;img src="img/big-buck-bunny-preview.jpg" /&gt;&lt;/a&gt;
   &lt;figcaption&gt;Mit Klick auf das Vorschaubild wird eine Verbindung zu Youtube aufgebaut. Lesen Sie sich unsere &lt;a href="../datenschutzerklaerung.html"&gt;Datenschutzerklärung&lt;/a&gt; durch!&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+          </div>
+        </section>
+        <section id="google_places">
+          <h2>Google Maps Iframe DSGVO</h2>
+          <div class="content">
+            <p>Eine Figure mit einem Link zu Google Places und einem Lokalen Vorschaubild werden auf Klick zu eingebetteten Google Rezensionen.</p>
+            <p>In der Figcaption ist der nötige Hinweis zur Datenschutzerklärung einzugeben.</p>
+            <h3>Config</h3>
+            <pre class="language-js"><code class="language-js">options: {
+    classNames:{
+      started: 'started'
+    },
+    selectors: {
+      preview: 'figure.google-preview',
+      map_frame: '.map-frame',
+    }
+},</code></pre>
+            <h3>Beispiel</h3>
+            <figure class="google-preview">
+              <a target="_blank" rel="noopener, noreferrer" href="https://goo.gl/maps/rjSFFuS6f7zcEKGn7" data-map="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21483.034914841264!2d13.3314537!3d47.6964719!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x99c9d125e18f64fb!2sMIMAZ%20Immobilien!5e0!3m2!1sde!2sat!4v1651136568844!5m2!1sde!2sat"><img src="img/google-places-preview.png" /></a>
+              <figcaption>Mit Klick auf das Vorschaubild wir eine Verbindung zu Google Maps aufgebaut. Lesen Sie sich unsere <a href="../datenschutzerklaerung.html">Datenschutzerklärung</a> durch!</figcaption>
+            </figure>
+            <h4>HTML</h4>
+          <pre class="language-html"><code class="language-html">&lt;figure class="google-preview"&gt;
+  &lt;a target="_blank" rel="noopener, noreferrer" href="https://goo.gl/maps/rjSFFuS6f7zcEKGn7" data-map="https://www.google.at/maps/place/MIMAZ+Immobilien/@47.6964719,13.3457582,7z/data=!4m2!3m1!1s0x0:0x99c9d125e18f64fb?sa=X&ved=2ahUKEwjy6_2E7Lj3AhXk4IUKHasjCqwQ_BJ6BAg6EAU"&gt;&lt;img src="img/google-places-preview.png" /&gt;&lt;/a&gt;
+  &lt;figcaption&gt;Mit Klick auf das Vorschaubild wird eine Verbindung zu Google Maps aufgebaut. Lesen Sie sich unsere &lt;a href="../datenschutzerklaerung.html"&gt;Datenschutzerklärung&lt;/a&gt; durch!&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
           </div>
         </section>
