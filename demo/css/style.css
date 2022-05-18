@@ -310,26 +310,28 @@ section[id] > h2::before{
 section[id] > h2::before{
   left:0;
 }
-.menu .item-dev       a::before { content:'code'; }
-.menu .item-docs      a::before { content:'description'; }
-.menu .item-features  a::before { content:'settings'; }
-.menu .item-about     a::before { content:'batch_prediction'; }
+.menu .item-dev           a::before { content:'code'; }
+.menu .item-docs          a::before { content:'description'; }
+.menu .item-features      a::before { content:'settings'; }
+.menu .item-about         a::before { content:'batch_prediction'; }
 
-.menu .item-feature   a::before { content:'flaky'; }
-.menu .item-accordeon a::before { content:'arrow_drop_down_circle'; }
-.menu .item-scrolled  a::before { content:'system_update_alt'; }
+.menu .item-feature       a::before { content:'flaky'; }
+.menu .item-accordeon     a::before { content:'arrow_drop_down_circle'; }
+.menu .item-scrolled      a::before { content:'system_update_alt'; }
 .menu .item-scrollindicator  a::before { content:'blur_linear'; }
-.menu .item-scrollto  a::before { content:'swap_calls'; }
-.menu .item-youtube_embed   a::before { content:'play_circle_filled'; }
-.menu .item-to-top    a::before,
-.to-top::before                 { content:'arrow_circle_up'; }
+.menu .item-scrollto      a::before { content:'swap_calls'; }
+.menu .item-youtube_embed a::before { content:'play_circle_filled'; }
+.menu .item-frame_embed   a::before { content:'select_all'; }
+.menu .item-to-top        a::before,
+.to-top::before                     { content:'arrow_circle_up'; }
 
-#feature   > h2::before { content:'flaky'; }
-#accordeon > h2::before { content:'arrow_drop_down_circle'; }
-#scrolled  > h2::before { content:'system_update_alt'; }
+#feature       > h2::before { content:'flaky'; }
+#accordeon     > h2::before { content:'arrow_drop_down_circle'; }
+#scrolled      > h2::before { content:'system_update_alt'; }
 #scrollindicator  > h2::before { content:'blur_linear'; }
-#scrollto  > h2::before { content:'swap_calls'; }
+#scrollto      > h2::before { content:'swap_calls'; }
 #youtube_embed > h2::before { content:'play_circle_filled'; }
+#frame_embed   > h2::before { content:'select_all'; }
 
 .sidebar{
 }

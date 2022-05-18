@@ -13,30 +13,30 @@
   sandboxTheme.features = $.extend(true, sandboxTheme.features || {}, {
     
     /**
-     * @member  {object}  google_embed
-     * google embed GPDR/DSGVO conform
+     * @member  {object}  frame_embed
+     * iframe embed GPDR/DSGVO conform
      * 
      * @memberof sandboxTheme.features
      * @example
-     * <figure class="google-preview">
+     * <figure class="frame-preview">
      *   <a href="">
      *     <img src="img/" />
      *   </a>
      *   <figcaption>Mit Klick auf das Vorschaubild wir eine Verbindung zu google aufgebaut. Lesen Sie sich unsere <a href="../datenschutzerklaerung.html">Datenschutzerklärung</a> durch!</figcaption>
      * </figure>
      */
-    google_places: {
+    frame_embed: {
       options: {
         classNames:{
           started: 'started'
         },
         selectors: {
-          preview: 'figure.google-preview',
-          map_frame: '.map-frame',
+          preview: 'figure.frame-preview',
+          frame: '.frame',
         }
       },
       templates:{
-        map: '<iframe class="map-frame" allowfullscreen="allowfullscreen" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />'
+        map: '<iframe class="frame" allowfullscreen="allowfullscreen" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />'
       },
       start: function(trigger){
         var classNames = this.options.classNames,

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding meta -->
+    
+
+    <!-- Adding external script-->
+    
+
+    <!-- Adding external style-->
+    
+
+    <!-- Adding scripts-->
+    
+
+    <!-- Adding style-->
+    
+
+    <!-- Adding overlay script-->
+    
+
+    <!-- Adding overlay style-->
+    
+
+
+    <title>
+      sandboxTheme.js
+    </title>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/third-party/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/third-party/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/reset.css">
+    <link type="text/css" rel="stylesheet" href="styles/heading.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-base.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-light.css">
+    
+    <svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path
+                    d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z" />
+                <path
+                    d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z" />
+            </g>
+        </symbol>
+        <symbol id='search-icon' viewBox="0 0 512 512">
+            <g>
+                <g>
+                    <path
+                        d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path
+                        d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z" />
+                </g>
+            </g>
+        </symbol>
+        <symbol id="down-icon" viewBox="0 0 16 16">
+            <path 
+                fill-rule="evenodd" 
+                clip-rule="evenodd" 
+                d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"
+            >
+            </path>
+        </symbol>
+    </defs>
+</svg>
+  </head>
+
+  <body>
+
+    <nav class="navbar" id="navbar">
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">SandboxTheme JS</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="5252769" > <h3 class="accordion-heading">Namespaces<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion collapsed child" id=7927654><div class="accordion-heading child"><a href="sandboxTheme.html">sandboxTheme</a><svg><use xlink:href="#down-icon"></use></svg></div><ul class='methods accordion-content'><li data-type='method'><a href="sandboxTheme.html#.get_feature">get_feature</a></li><li data-type='method'><a href="sandboxTheme.html#.get_page">get_page</a></li><li data-type='method'><a href="sandboxTheme.html#.init">init</a></li><li data-type='method'><a href="sandboxTheme.html#.is_page">is_page</a></li><li data-type='method'><a href="sandboxTheme.html#.sanitize_html_class">sanitize_html_class</a></li><li data-type='method'><a href="sandboxTheme.html#.trigger">trigger</a></li></ul></li></ul> </div></div>
+      
+
+    </nav>
+    <div class="navbar-ham" id="navbar-ham">
+      <div>
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+      </div>
+    </div>
+
+    <div id="main" class="main-content">
+      
+      <h1 id='page-title' class="page-title">
+        sandboxTheme.js
+      </h1>
+      
+
+      
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>;(function($){
+  'use strict';
+
+  /**
+   * Sandbox Theme Frontend JS Revealing Module
+   *
+   * Gives you all you need to deal with frontend/client/browser interactions
+   * - feature methods API to easy develop fast forward features
+   * - global API methods to access page data and information about the current page
+   * - global namespace of the lib in the window object
+   * - you can change the name with search/replace
+   * 
+   * @namespace  sandboxTheme
+   */
+  window.sandboxTheme = (function(){
+
+        /**
+         * @var  {jQuery_DOMelement}  $body  selected body element         * 
+         * @memberof! sandboxTheme
+         * @private
+         */
+    var $body = $('body'),
+
+        /**
+         * @var  {array}  eventNames  list of allowed event names. 
+         * 
+         * Can be extended with custom names
+         * 
+         * Default event names:
+         * - 'resize'
+         * - 'scroll'
+         * - 'ready'
+         * - 'load'
+         * - 'sticky'
+         * 
+         * @memberof! sandboxTheme
+         * @private
+         */
+        eventNames = [
+          'resize', 
+          'scroll',
+          'ready', 
+          'load', 
+          'sticky',
+        ],
+
+        /**
+         * @var  {array}  readyStates  list of possible ready states. 
+         * 
+         * @memberof! sandboxTheme
+         * @private
+         */
+        readyStates = ['interactive', 'complete'],
+
+        /**
+         * @function  trigger_event  loops trough all features, checks if its active and executes the callback if any is present
+         * @param    {string}  eventName    name of the event to trigger
+         * @param    {object}  [eventData]  pass additional data to the event handlers
+         * 
+         * @memberof! sandboxTheme
+         * @private
+         */
+        trigger_event = function(){
+          var feature,
+              featureName,
+              eventName = typeof arguments[0] !== 'undefined' ? arguments[0] : null,
+              eventData = typeof arguments[1] !== 'undefined' ? arguments[1] : null;
+
+          if ( eventName &amp;&amp; $.inArray(eventName, eventNames) !== -1 ) {
+            // Trigger all features
+            for ( featureName in sandboxTheme.features ) {
+              if ( sandboxTheme.features.hasOwnProperty(featureName) ) {
+                if ( sandboxTheme.info['feature-' + featureName] ) {
+                  feature = sandboxTheme.features[featureName];
+                  if ( typeof feature[eventName] === 'function' ) {
+                    feature[eventName](eventData);
+                  }
+                }
+              }
+            }
+          }
+        },
+
+        /**
+         * @function  ready_events_register  sets all event handler after the document has become "ready"   
+         *
+         * @memberof! sandboxTheme
+         * @private
+         */
+        ready_events_register = function(){
+          trigger_event('ready');
+          document.addEventListener('scroll', function(event){
+            trigger_event('scroll', event);
+          }, { passive: true });
+          window.addEventListener('resize', function(event){
+            trigger_event('resize', event);
+          }, { passive: true });
+        },
+
+        /**
+         * @function  setup  initiates the sandboxTheme 
+         * @param    {object}  data  data stack to instantiate with   
+         *
+         * @memberof! sandboxTheme
+         * @private
+         */
+        setup = function setup(){
+          var featureName,
+              feature,
+              featureOptions,
+              dataName,
+              dataValue,
+              data = arguments[0];
+
+
+          /**
+           * @member  {object}  info  gerneral purpose data storage, gets extracted from init data "info" key values and gets extended by features informations
+           * 
+           * can be also filled and extended like the page data
+           * 
+           * @memberof sandboxTheme
+           */
+          sandboxTheme.info = {};
+
+          /**
+           * @member  {object}  page  page data storage, gets extracted from init data with every key/value pairs except for the "info" key
+           *
+           *   WordPress usual contents with the sandboxTheme_data:
+           *   - ID:   number
+           *   - name: string  the slug/permalink name of that page/post/content
+           *   - meta: object  other field contents, in WordPress filled with "get_post_custom()"
+           *   - verify:       nonce value used for admin-ajax requests filled with "wp_create_nonce('sandbox_ajax_call')"
+           *   - urls: object  contains addresses where your script can communicate with
+           *   -- admin-ajax:    address to access ajax responder functions
+           *   -- rest:          rest endpoint for that page
+           *   -- template:      Template root folder URL
+           *                        
+           *   Drupal usual contents of window.drupalsettings:
+           *   - ajaxTrustedUrl:   object
+           *   - data:   object  contains informations about external links and other stuff
+           *   - path:   object  contains relevant data
+           *   -- baseUrl:             string   root of the website
+           *   -- currentLanguage:     string   2 letter ISO language code
+           *   -- currentPath:         string   the node path, example "node/1" also useable as ID
+           *   -- currentPathIsAdmin:  Boolean
+           *   -- isFront:             Boolean
+           *   -- pathPrefix:          string   ""
+           *   -- scriptPath:          string/null
+           *   - there are even more keys there, to see all look at
+           *   UNFORTUNATLY there is no documentation for Drupal what default values are inside of "drupalssettings"
+           *   also it may be subject to change
+           *                        
+           *   Shopify usual contents of window.sandboxTheme_data
+           *   - handle:        string  the slug/permalink name of that page/post/content
+           *   - template:      string  the used template root file name
+           *   - shopCurrency:  string  ISO currency name
+           *   - moneyFormat:   string  template to display an ammount, example: "&amp;euro;{{amount}}"
+           *                        
+           *   you can add more values in a similar way as WordPress or you can also use the global
+           *   window.Shopify object as data source, but thats then not extendable.
+           *   UNFORTUNATLY there is no documentation for Shopify what default values are inside of "window.Shopify"
+           *   also it may be subject to change
+           *
+           * @memberof sandboxTheme
+           */
+          sandboxTheme.page = {};
+          
+          sandboxTheme.page.url_params = new URLSearchParams(window.location.search);
+
+          if ( $.isPlainObject(data) ) {
+            for ( dataName in data ) {
+              if ( data.hasOwnProperty(dataName) ) {
+                dataValue = dataName === 'id' ? parseInt(data[dataName]) : data[dataName];
+
+                if ( dataName !== 'info') {
+                  sandboxTheme.page[dataName] = dataValue;
+                }
+              }
+            }
+            if ( data.hasOwnProperty('info') ) {
+              for ( dataName in data.info ) {
+                if ( data.info.hasOwnProperty(dataName) ) {
+                  sandboxTheme.info[dataName] = data.info[dataName];
+                }
+              }
+            }
+          }
+
+          console.log(data);
+
+          // Loop through all features to set all neccessary data
+          for ( featureName in sandboxTheme.features ) {
+            if ( sandboxTheme.features.hasOwnProperty(featureName) ) {
+              feature = sandboxTheme.features[featureName];
+
+              // Make a copy of merged page feature options and feature options
+              // jQuery.extend() will take care for a boolean value of options.page.features[featureName]
+              featureOptions = $.extend(true, {}, feature.options || {});
+
+              // Merge the feature with common feature functions, options and info
+              $.extend(true, feature, {
+                options: featureOptions,
+                info: {
+                  name: featureName,
+                  class_name: sandboxTheme.sanitize_html_class(featureName),
+                  /**
+                   * Lookup for a hash fragment that starts with the features name
+                   * false if no match is found
+                   */
+                  hash: window.location.hash.length > 0 &amp;&amp; window.location.hash.match('^#' + featureName) ? window.location.hash.replace('#' + featureName + '-', '') : false,
+                }
+              });
+              sandboxTheme.info['feature-' + featureName] = Boolean(feature.setup());
+            }
+          }
+
+          // Execute events
+          if ( $.inArray(document.readyState, readyStates) !== -1 ) {
+            ready_events_register();
+          } else {
+            $(document).on('DOMContentLoaded readyStates', function(){
+              ready_events_register();
+            });
+          }
+          $(window).on('load', function(){
+            trigger_event('load');
+          });
+        };
+
+    /**
+     * Public API
+     */
+    return {
+
+      /**
+       * init method
+       * 
+       * use to initiate the lib. 
+       * you can fill the first param "data" it with a handed over localization script in JSON format
+       * 
+       * @param    {object}  data  named usually "sandboxTheme_data"
+       *                      
+       *   WordPress: use wp_localize_script to add data. 
+       *   See /theme/wordpress/functions.php for detailed possibilities
+       *                      
+       *   Drupal: use the global "window.drupalsettings" data stack
+       *   See https://www.codimth.com/blog/web/drupal/passing-data-php-javascript-drupal-8 for implementations
+       * 
+       *   Shopify: use "window.theme"
+       * @memberof sandboxTheme
+       * @example
+       * // only prepared data
+       * sandboxTheme.init(sandboxTheme_data);
+       * 
+       * // get more data from the WordPress REST API
+       * // Don't forget to add "'show_in_rest' => true," when registering a custom post type
+       * var siteData = $.getJSON(sandboxTheme_data.urls.rest);
+       *
+       * siteData.done(function(pageData){
+       *   if ( $.isPlainObject(pageData) ) {
+       *     sandboxTheme.init($.extend(sandboxTheme_data, pageData));
+       *   } else {
+       *     sandboxTheme.init(sandboxTheme_data);
+       *   }
+       * });
+       */
+      init: function init(){
+        setup(arguments[0] || null);
+      },
+
+      /**
+       * @member  {jQuery_DOMelement}  $body  never again select $('body') just use sandboxTheme.$body or document.body
+       * @memberof sandboxTheme
+       * @example
+       * sandboxTheme.$body.addClass('myClass');
+       */
+      $body: $body,
+
+      /**
+       * is_page method
+       * 
+       * use to determine if this is a "page", in WordPress this means if it has the post_type "page"
+       * 
+       * @param    {number}  [ID]  when an ID gets provided is_page() checks if you are on a post/page/content with that ID 
+       * @memberof sandboxTheme
+       * @example
+       * if ( sandboxTheme.is_page(8) { 
+       *   // on page with the ID 8
+       * };
+       */
+      is_page: function is_page(){
+        var id = typeof arguments[0] !== 'undefined' ? parseInt(arguments[0]) : null;
+
+        if ( id ) {
+          return id === sandboxTheme.page.id;
+        } else {
+          return sandboxTheme.info.is_page;
+        }
+      },
+
+      /**
+       * get_page  method
+       * 
+       * returns you all page properties in sandboxTheme.page or single properties if a propertyname is provided
+       * 
+       * @param   {string}  [property]  inspect sandboxTheme.page for possible values. 
+       *
+       * Throws an error if the property does not exist.
+       *
+       * @memberof sandboxTheme
+       * @example
+       * var ajax_url = sandboxTheme.get_page('urls').ajax;
+       * 
+       * if ( sandboxTheme.get_page('url_params').get('view') === 'student' ) { 
+       *   // URL has "?view=student"
+       * };
+       */
+      get_page: function get_page(){
+        var property = typeof arguments[0] === 'string' ? arguments[0] : null;
+
+        if ( property ) {
+          if ( sandboxTheme.page.hasOwnProperty(property) ) {
+            return sandboxTheme.page[property];
+          } else {
+            throw new Error('no page property called "' + property + '"');
+          }
+        } else {
+          return sandboxTheme.page;
+        }
+      },
+
+      /**
+       * get_feature
+       * 
+       * returns you all registered features or a single feature if a featurename is provided
+       * 
+       * @param  {string} [feature_name]  inspect sandboxTheme.featrues for possible values.
+       *                                  throws an error if the feature does not exist.
+       * @return {namespace|object}       all registered features or a single feature if a featurename is provided
+       * @memberof sandboxTheme
+       * @example
+       * var scrolled_feature = sandboxTheme.get_feature('scrolled');
+       * 
+       * // sandboxTheme.info['feature-scrolled'] true when setup() of that feature returned true
+       * // typeof scrolled_feature.ready === 'function' check if that optional method exists
+       * if ( sandboxTheme.info['feature-scrolled'] &amp;&amp; typeof scrolled_feature.ready === 'function' ) {
+       *   scrolled_feature.ready();
+       * }
+       */
+      get_feature: function get_feature(){
+        var feature_name = typeof arguments[0] === 'string' ? arguments[0] : null;
+
+        if ( feature_name ) {
+          if ( sandboxTheme.features.hasOwnProperty(feature_name) ) {
+            return sandboxTheme.features[feature_name];
+          } else {
+            throw new Error('no feature called "' + feature_name + '"');
+          }
+        } else {
+          return sandboxTheme.features;
+        }
+      },
+
+      /**
+       * trigger method
+       * 
+       * use to trigger an internal event. 
+       * all features methods with the same name as the event name will be executed.
+       *
+       * only event names in the list of the internal "eventNames" array are allowed.
+       *
+       * Default event names:
+       * - 'resize'
+       * - 'scroll'
+       * - 'ready'
+       * - 'load'
+       * - 'sticky'
+       * 
+       * you can easily extend that list to allow more event names.
+       *
+       * @param    {string}  eventName    name of the event to trigger
+       * @param    {object}  [eventData]  pass additional data to the event handlers
+       * @memberof sandboxTheme
+       * @example
+       * element.addEventlistener('click', function(event){
+       *   if ( document.body.classList.contains('active') ) {
+       *     // all present "disable_element()" methods of all features get executed
+       *     sandboxTheme.trigger('disable_element', element);
+       *   } else {
+       *     // all present "enable_element()" methods of all features get executed
+       *     sandboxTheme.trigger('enable_element', element);
+       *   }
+       * });
+       */
+      trigger: function trigger(){
+        var eventName = typeof arguments[0] !== 'undefined' ? arguments[0] : null,
+            data = typeof arguments[1] !== 'undefined' ? arguments[1] : null;
+
+        if ( eventName &amp;&amp; $.inArray(eventName, eventNames) !== -1 ) {
+          trigger_event(eventName, data);
+        }
+      },
+
+      /**
+       * Sanitize HTML class
+       * 
+       * Clone of WordPress PHP API method sanitize_html_class for best compatibility.
+       * 
+       * Use it to get save sanitized html classNames
+       *                        
+       * @param    {string}  class_name  required  string you want to be a class name
+       * @memberof sandboxTheme
+       * @example
+       * var text = element.textContent, // hello world
+       *     class_name = sandboxTheme.sanitize_html_class(text); // hello-world
+       */
+      sanitize_html_class: function sanitize_html_class(){
+        var class_name = typeof arguments[0] === 'string' ? arguments[0] : null;
+
+        // taken from WordPress PHP API for best compatibility
+        // https://developer.wordpress.org/reference/functions/sanitize_html_class/
+        if ( class_name ) {
+          // Strip out any %-encoded octets.
+          class_name = class_name.replace(/|%[a-fA-F0-9][a-fA-F0-9]|/, '');
+          // Limit to A-Z, a-z, 0-9, '_', '-'.
+          class_name = class_name.replace(/[^A-Za-z0-9_-]/, '');
+          // replace all "_" to "-"
+          class_name = class_name.split('_').join('-');
+
+          return class_name;
+        } else {
+          throw new Error('Param "class_name" is not a string');
+        }
+      }
+    };
+  })();
+  
+
+  /**
+   * place to add your features.
+   * @namespace  sandboxTheme.features
+   * @member  {namespace}
+   * @memberof   sandboxTheme
+   */
+  sandboxTheme.features = {};
+  
+})(jQuery);
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+
+    <footer class="footer" id="footer">
+      
+    </footer>
+
+    <script src="scripts/third-party/prettify.js"></script>
+    <script src="scripts/third-party/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/misc.js"></script>
+
+    <script>prettyPrint();</script>
+    <script src="scripts/linenumber.js"></script>
+    <script src="scripts/fix-code-block.js"></script>
+    <script src="scripts/fix-navbar.js"></script>
+    
+      <script src="scripts/search.js"></script>
+      <script src="scripts/third-party/fuse.js"></script>
+      <script>
+        var list = [{"title":"sandboxTheme","link":"<a href=\"sandboxTheme.html\">sandboxTheme</a>"},{"title":"sandboxTheme.get_feature","link":"<a href=\"sandboxTheme.html#.get_feature\">sandboxTheme.get_feature &rtrif; undefined</a>"},{"title":"sandboxTheme.get_page","link":"<a href=\"sandboxTheme.html#.get_page\">sandboxTheme.get_page &rtrif; undefined</a>"},{"title":"sandboxTheme.init","link":"<a href=\"sandboxTheme.html#.init\">sandboxTheme.init &rtrif; undefined</a>"},{"title":"sandboxTheme.is_page","link":"<a href=\"sandboxTheme.html#.is_page\">sandboxTheme.is_page &rtrif; undefined</a>"},{"title":"sandboxTheme.sanitize_html_class","link":"<a href=\"sandboxTheme.html#.sanitize_html_class\">sandboxTheme.sanitize_html_class &rtrif; undefined</a>"},{"title":"sandboxTheme.trigger","link":"<a href=\"sandboxTheme.html#.trigger\">sandboxTheme.trigger &rtrif; undefined</a>"}];
+        var options = 
+          setupSearch(list, options)
+      </script>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  </body>
+
+</html>
