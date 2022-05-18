@@ -9,6 +9,8 @@ Gives you all you need to deal with frontend/client/browser interactions
 - global namespace of the lib in the window object
 - you can change the name with search/replace
 
+Demo: https://www.dev-themes.com/
+
 **Kind**: global namespace  
 
 * [sandboxTheme](#sandboxTheme) : <code>object</code>
