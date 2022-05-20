@@ -49,7 +49,7 @@
       end: function(trigger){
         var classNames = this.options.classNames,
             selectors = this.options.selectors,
-            $map = $(trigger).siblings(selectors.map_frame);
+            $map = $(trigger).siblings(selectors.frame);
         
         $map.remove();
         $(trigger).parent().removeClass(classNames.started);
