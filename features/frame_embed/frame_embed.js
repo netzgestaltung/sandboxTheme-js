@@ -36,43 +36,43 @@
         }
       },
       templates:{
-        map: '<iframe class="frame" allowfullscreen="allowfullscreen" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />'
+        frame: '<iframe class="frame" allowfullscreen="allowfullscreen" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />'
       },
       start: function(trigger){
         var classNames = this.options.classNames,
             templates = this.templates,
-            $map = $(templates.map);
+            $frame = $(templates.frame);
         
-        $map.attr('src', trigger.dataset.map);
-        $(trigger).parent().append($map).addClass(classNames.started);
+        $frame.attr('src', trigger.dataset.frame);
+        $(trigger).parent().append($frame).addClass(classNames.started);
       },
       end: function(trigger){
         var classNames = this.options.classNames,
             selectors = this.options.selectors,
-            $map = $(trigger).siblings(selectors.frame);
+            $frame = $(trigger).siblings(selectors.frame);
         
-        $map.remove();
+        $frame.remove();
         $(trigger).parent().removeClass(classNames.started);
       },
       events: function events(){
         var classNames = this.options.classNames,
-            google_places = this,
+            frame_embed = this,
             $triggers = this.$previews.children('a');
-
+        
         $triggers.on('click', function(event){
           if ( $(this).parent().hasClass(classNames.started) ) {
-            google_places.end(this);
+            frame_embed.end(this);
           } else {
             $triggers.each(function(){
-              google_places.end(this);
+              frame_embed.end(this);
             });
-            google_places.start(this);
+            frame_embed.start(this);
           }
           event.preventDefault();
         });
       },
       ready: function ready(){
-        // register google previews to the feature
+        // register frame previews to the feature
         this.$previews = $(this.options.selectors.preview);
 
         // use events function to add event handlers
